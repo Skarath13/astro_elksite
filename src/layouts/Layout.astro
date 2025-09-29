@@ -277,5 +277,54 @@ const { title, description, keywords } = Astro.props;
     <slot />
     <BookingModal />
     <FAQModal />
+
+    <script is:inline>
+      // Global FAQ Modal functionality
+      window.addEventListener('DOMContentLoaded', function() {
+        console.log('🌟 Global FAQ Modal initialization from Layout');
+
+        const faqModal = document.getElementById('faq-modal');
+        const faqButtons = document.querySelectorAll('[data-modal="faq"]');
+
+        console.log('🔍 FAQ Modal found:', faqModal ? 'YES' : 'NO');
+        console.log('🔍 FAQ Buttons found:', faqButtons.length);
+
+        if (faqModal && faqButtons.length > 0) {
+          console.log('✅ Setting up FAQ modal listeners...');
+
+          faqButtons.forEach((button, index) => {
+            console.log(`   Setting up button ${index + 1}: "${button.textContent.trim()}"`);
+            button.addEventListener('click', function(e) {
+              console.log('🎯 FAQ button clicked!');
+              e.preventDefault();
+              e.stopPropagation();
+              faqModal.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            });
+          });
+
+          // Close functionality
+          const closeButtons = faqModal.querySelectorAll('.modal-close');
+          const overlay = faqModal.querySelector('.modal-overlay');
+
+          function closeFAQ() {
+            console.log('❌ Closing FAQ modal');
+            faqModal.classList.add('hidden');
+            document.body.style.overflow = '';
+          }
+
+          closeButtons.forEach(btn => btn.addEventListener('click', closeFAQ));
+          if (overlay) overlay.addEventListener('click', closeFAQ);
+
+          document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !faqModal.classList.contains('hidden')) {
+              closeFAQ();
+            }
+          });
+        } else {
+          console.log('❌ FAQ modal setup failed');
+        }
+      });
+    </script>
 </body>
 </html>

@@ -257,10 +257,13 @@
     </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
+<script is:inline>
+  function initFAQModal() {
+    console.log('🚀 Initializing FAQ Modal...');
+
     // FAQ accordion functionality
     const faqQuestions = document.querySelectorAll('.faq-question');
+    console.log('📝 Found FAQ questions:', faqQuestions.length);
 
     faqQuestions.forEach(question => {
       question.addEventListener('click', function() {
@@ -285,33 +288,90 @@
     // FAQ modal functionality
     const faqModal = document.getElementById('faq-modal');
     const faqButtons = document.querySelectorAll('[data-modal="faq"]');
-    const faqCloseButtons = faqModal.querySelectorAll('.modal-close');
-    const faqOverlay = faqModal.querySelector('.modal-overlay');
 
-    faqButtons.forEach(button => {
-      button.addEventListener('click', function(e) {
+    console.log('🔍 FAQ Modal element:', faqModal ? 'FOUND' : 'NOT FOUND');
+    console.log('🔍 FAQ Buttons found:', faqButtons.length);
+
+    // Log all buttons with data-modal attribute for debugging
+    const allModalButtons = document.querySelectorAll('[data-modal]');
+    console.log('🔍 All modal buttons:', allModalButtons.length);
+    allModalButtons.forEach((btn, index) => {
+      console.log(`   Button ${index + 1}: data-modal="${btn.getAttribute('data-modal')}", text="${btn.textContent.trim()}"`);
+    });
+
+    if (faqModal) {
+      const faqCloseButtons = faqModal.querySelectorAll('.modal-close');
+      const faqOverlay = faqModal.querySelector('.modal-overlay');
+
+      function openFAQModal(e) {
+        console.log('✅ Opening FAQ Modal');
         e.preventDefault();
         faqModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
-      });
-    });
-
-    function closeFAQModal() {
-      faqModal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    faqCloseButtons.forEach(button => {
-      button.addEventListener('click', closeFAQModal);
-    });
-
-    faqOverlay.addEventListener('click', closeFAQModal);
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && !faqModal.classList.contains('hidden')) {
-        closeFAQModal();
       }
-    });
+
+      function closeFAQModal() {
+        console.log('❌ Closing FAQ Modal');
+        faqModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      // Attach listeners to FAQ buttons
+      if (faqButtons.length > 0) {
+        console.log('✅ Attaching listeners to', faqButtons.length, 'FAQ buttons');
+        faqButtons.forEach((button, index) => {
+          console.log(`   Attaching to button ${index + 1}:`, button.textContent.trim());
+          button.addEventListener('click', openFAQModal);
+        });
+      } else {
+        console.log('⚠️ No FAQ buttons found');
+      }
+
+      // Close button listeners
+      if (faqCloseButtons.length > 0) {
+        faqCloseButtons.forEach(button => {
+          button.addEventListener('click', closeFAQModal);
+        });
+      }
+
+      // Overlay click listener
+      if (faqOverlay) {
+        faqOverlay.addEventListener('click', closeFAQModal);
+      }
+
+      // Escape key listener
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !faqModal.classList.contains('hidden')) {
+          closeFAQModal();
+        }
+      });
+    } else {
+      console.log('❌ FAQ Modal not found in DOM');
+    }
+  }
+
+  // Try to initialize immediately
+  console.log('📍 FAQ Modal script loaded');
+
+  // Try multiple initialization approaches
+  if (document.readyState === 'loading') {
+    console.log('📍 Document still loading, waiting for DOMContentLoaded...');
+    document.addEventListener('DOMContentLoaded', initFAQModal);
+  } else {
+    console.log('📍 Document already loaded, initializing immediately...');
+    initFAQModal();
+  }
+
+  // Also try with a slight delay to handle dynamic content
+  setTimeout(() => {
+    console.log('📍 Delayed initialization attempt...');
+    initFAQModal();
+  }, 500);
+
+  // Additional backup initialization on window load
+  window.addEventListener('load', () => {
+    console.log('📍 Window load event, final initialization attempt...');
+    initFAQModal();
   });
 </script>
 

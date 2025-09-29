@@ -1,0 +1,71 @@
+RewriteEngine On
+RewriteBase /
+
+# Manual push: Ensure proper HTTPS and URL handling with Cloudflare/Netlify
+# Check if not already HTTPS (handles both direct and proxy HTTPS)
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.elegantlashesbykatie\.com [NC]
+RewriteRule ^(.*)$ https://elegantlashesbykatie.com/$1 [L,R=301]
+
+# Redirect temporary domain to main site
+RewriteCond %{HTTP_HOST} ^dlu\.ano\.mybluehost\.me$ [NC]
+RewriteRule ^(.*)$ https://elegantlashesbykatie.com/$1 [R=301,L]
+
+# Remove trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Redirect all capitalized URLs to home page (case-insensitive match)
+RewriteRule ^([A-Z][a-zA-Z]*)/?$ / [NC,R=301,L]
+
+# Redirect old URLs to home page
+RewriteRule ^home/?$ / [R=301,L]
+
+# Only handle specific routes for the SPA (case-insensitive)
+# Includes standard pages, lash menu, location-specific technician pages, shop, and FAQs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(about|locations|services|reviews|team|gallery|after-care|contact|lash-menu|[a-z-]+-lash-technicians|shop-page|faqs)/?$ index.html [L,NC]
+
+# Production Caching Rules
+<IfModule mod_headers.c>
+    # Default cache control for all files
+    Header set Cache-Control "public, max-age=86400"
+    
+    # Cache static assets for 1 year
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Cache CSS and JavaScript for 1 week
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+    
+    # Don't cache HTML files
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+</IfModule>
+
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Prevent directory browsing
+Options -Indexes 

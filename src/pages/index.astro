@@ -1,16 +1,77 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ReviewsSection from '../components/ReviewsSection.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import TeamSection from '../components/TeamSection.astro';
+import GallerySection from '../components/GallerySection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Best Lash Extensions Orange County | Elegant Lashes by Katie | Appointment Prep Guide | Irvine, Tustin, Santa Ana, Costa Mesa"
+  description="Orange County's #1 rated lash extension salon with 4 locations in Irvine, Tustin, Santa Ana & Costa Mesa. Best eyelash extensions OC - volume, classic, hybrid lashes. Complete appointment prep guide included. Book today!"
+  keywords="best lash extensions Orange County, eyelash extensions Irvine CA, lash salon Tustin, volume lashes Santa Ana, classic lashes Costa Mesa, hybrid lashes OC, volume lashes Orange County, lash studio near me, affordable eyelash extensions Orange County, professional lash artist Irvine, best lash salon OC, luxury lash extensions Orange County, natural lash extensions Tustin, dramatic volume lashes Santa Ana, lash lift and tint Costa Mesa, bridal lashes Orange County, prom lashes OC, lash extension fills near me, premium lash studio Orange County, top rated lash salon, lash appointment preparation OC, how to prepare for lash extensions, lash extension aftercare Orange County, mascara removal fees lash salon"
+>
+  <Navigation />
+
+  <main class="pt-20">
+    <HeroSection />
+    <ReviewsSection />
+    <ServicesSection />
+
+    <!-- Appointment Preparation Section -->
+    <section id="preparation" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-center gap-12">
+                <!-- Content Column -->
+                <div class="md:w-1/2">
+                    <div class="ghibli-card p-8 md:p-10">
+                        <h2 class="text-3xl md:text-4xl font-bold font-playfair text-darktext mb-6 text-center">
+                            How to Prepare for Your Lash Appointment
+                        </h2>
+                        <p class="text-center text-mediumtext mb-10 text-lg max-w-xl mx-auto">Follow these simple steps before your appointment to ensure the best results:</p>
+                        <ul class="space-y-5 text-base text-darktext">
+                            <li class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0020 5.5V3.935m-18 0A2.97 2.97 0 012 3h16a2 2 0 012 2v.935m-18 0V19a2 2 0 002 2h16a2 2 0 002-2V3.935" /></svg>
+                                <span><strong class="font-semibold">Clean Your Lashes:</strong> Remove all eye makeup and mascara. Clean lashes = better adhesion and longer-lasting results.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                                <span><strong class="font-semibold">Use Oil-Free Products:</strong> Avoid oil-based makeup removers or moisturizers around the eye area 24 hours before your appointment.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                <span><strong class="font-semibold">Shower Beforehand:</strong> Take your shower before your appointment to avoid water contact for the first 24 hours after application.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                                <span><strong class="font-semibold">Eat and Hydrate:</strong> Have a meal and bring water. Our detailed application process takes 2-3 hours for the best results.</span>
+                            </li>
+                            <li class="flex items-start gap-3 pt-4 border-t border-secondary/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-medium flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span class="text-mediumtext italic">Note: If you arrive with mascara or heavy eye makeup, there will be a $15 cleaning fee. Save time and money by arriving with clean lashes!</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Image Column -->
+                <div class="md:w-1/2 mb-8 md:mb-0 flex justify-center">
+                    <picture>
+                        <source srcset="/images/image0.webp" type="image/webp">
+                        <img src="/images/image0.png" alt="Professional lash extension preparation Orange County - Expert preparation tips for Russian volume classic lashes OC appointment" class="rounded-xl shadow-xl w-full h-auto object-cover max-w-md" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <TeamSection />
+    <GallerySection />
+    <ContactSection />
+  </main>
+
+  <Footer />
+</Layout>

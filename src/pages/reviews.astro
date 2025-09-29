@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import ReviewsSection from '../components/ReviewsSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Client Reviews Orange County Lash Extensions | 5-Star Yelp Reviews | Elegant Lashes by Katie"
+  description="Read hundreds of 5-star reviews from satisfied Orange County lash extension clients. See why we're the #1 rated lash salon in Irvine, Tustin, Santa Ana & Costa Mesa."
+  keywords="Orange County lash extension reviews, 5 star lash salon OC, best lash salon reviews Orange County, Yelp reviews lash extensions OC, client testimonials lash salon"
+>
+  <Navigation />
+
+  <main class="pt-20">
+    <div class="bg-gradient-ghibli py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold font-playfair text-darktext mb-4">
+          What Our Clients Say
+        </h1>
+        <p class="text-xl text-mediumtext mb-8">
+          Over 1,000+ five-star reviews from happy Orange County clients
+        </p>
+      </div>
+    </div>
+
+    <ReviewsSection />
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,304 @@
+---
+// Reviews Section Component
+const reviews = {
+  irvine: [
+    {
+      name: "Patricia H.",
+      location: "Irvine, CA",
+      date: "4/02/2024",
+      initials: "PH",
+      text: "Been coming to the Irvine location for over a year now and I'm consistently impressed. The quality of the lashes is top-notch, and my retention is fantastic – I easily get 3 weeks between fills for my hybrid set. The lash artist is always professional, quick, and the results are flawless every single time. Clean, comfy studio too. Worth every penny!"
+    },
+    {
+      name: "Sarah M.",
+      location: "Irvine, CA",
+      date: "3/15/2024",
+      initials: "SM",
+      text: "Amazing experience! Best lash extensions I've had in Orange County. The technician was so skilled and gentle. My lashes lasted over 3 weeks and looked incredible the entire time. Will definitely be back!"
+    },
+    {
+      name: "Jennifer L.",
+      location: "Irvine, CA",
+      date: "2/28/2024",
+      initials: "JL",
+      text: "Perfect lashes every time! I've been a client for 2 years and have never been disappointed. The staff is professional, the studio is clean, and the results are consistently beautiful. Highly recommend!"
+    }
+  ],
+  tustin: [
+    {
+      name: "Maria R.",
+      location: "Tustin, CA",
+      date: "4/10/2024",
+      initials: "MR",
+      text: "Absolutely love this place! The Tustin location is so convenient and the technicians are true artists. My volume lashes look so natural yet dramatic. Customer service is excellent too!"
+    },
+    {
+      name: "Ashley K.",
+      location: "Tustin, CA",
+      date: "3/22/2024",
+      initials: "AK",
+      text: "Best lash salon in Orange County! The quality is unmatched and the prices are very reasonable. I drive from Newport just to come here because nowhere else compares."
+    },
+    {
+      name: "Diana F.",
+      location: "Tustin, CA",
+      date: "3/05/2024",
+      initials: "DF",
+      text: "Five stars! The attention to detail is incredible. My hybrid set looks absolutely perfect and the retention is amazing. The studio is beautiful and so relaxing. Worth every penny!"
+    }
+  ],
+  santaana: [
+    {
+      name: "Isabella C.",
+      location: "Santa Ana, CA",
+      date: "4/08/2024",
+      initials: "IC",
+      text: "Amazing work! I've been getting lashes for years and this is by far the best quality I've experienced. The Santa Ana location is gorgeous and the staff is so welcoming. My classic set is perfect!"
+    },
+    {
+      name: "Sophia G.",
+      location: "Santa Ana, CA",
+      date: "3/20/2024",
+      initials: "SG",
+      text: "Incredible service and beautiful results! The technician took her time to make sure every lash was perfect. The retention is fantastic - going on 4 weeks and they still look amazing!"
+    },
+    {
+      name: "Carmen V.",
+      location: "Santa Ana, CA",
+      date: "3/02/2024",
+      initials: "CV",
+      text: "Best lash experience ever! The quality is outstanding and the prices are so reasonable. I love how natural yet full my volume set looks. Will never go anywhere else!"
+    }
+  ],
+  costamesa: [
+    {
+      name: "Rachel T.",
+      location: "Costa Mesa, CA",
+      date: "4/12/2024",
+      initials: "RT",
+      text: "Exceptional quality and service! The Costa Mesa location is beautiful and the technicians are so skilled. My mega volume set is exactly what I wanted - full, fluffy, and gorgeous!"
+    },
+    {
+      name: "Melissa W.",
+      location: "Costa Mesa, CA",
+      date: "3/25/2024",
+      initials: "MW",
+      text: "Love love love! Been coming here for 6 months and always leave feeling beautiful. The hybrid lashes are perfect for my lifestyle - natural but still glamorous. Highly recommend!"
+    },
+    {
+      name: "Nicole B.",
+      location: "Costa Mesa, CA",
+      date: "3/08/2024",
+      initials: "NB",
+      text: "Outstanding work! The attention to detail is incredible and the results speak for themselves. My classic set looks so natural that people think they're my real lashes. Amazing!"
+    }
+  ]
+};
+---
+
+<section id="reviews" class="bg-gradient-ghibli pb-20 md:pb-28 relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="decorative-blob" style="width: 400px; height: 400px; top: -10%; left: -15%; opacity: 0.15; background: radial-gradient(circle, #E57F9F 0%, #F4ADB8 70%, transparent 100%);"></div>
+    <div class="decorative-blob" style="width: 300px; height: 300px; bottom: 5%; right: -10%; opacity: 0.1; background: radial-gradient(circle, #FFCBB6 0%, #F4ADB8 80%, transparent 100%);"></div>
+    <div class="decorative-sparkle" style="top: 20%; right: 15%;"></div>
+    <div class="decorative-sparkle" style="bottom: 30%; left: 20%; animation-delay: 0.5s;"></div>
+    <div class="decorative-sparkle" style="top: 40%; left: 50%; animation-delay: 1s;"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold font-playfair text-darktext mb-4 relative inline-block">
+                Client Love Stories
+                <div class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-peach opacity-70"></div>
+            </h2>
+            <div class="flex items-center justify-center gap-4 mb-4">
+                <div class="flex items-center">
+                    <img src="/images/yelp.png" alt="5-star Yelp reviews Orange County lash extensions - Top rated lash salon OC" class="h-6 w-auto object-contain animate-pulse mr-3">
+                    <div class="flex">
+                        {[...Array(5)].map(() => (
+                            <svg class="h-6 w-6 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        ))}
+                    </div>
+                    <div class="flex items-center ml-3">
+                        <span class="text-2xl font-semibold text-darktext">5.0</span>
+                        <span class="text-sm text-mediumtext ml-2">based on <span class="font-semibold">1,000+</span> reviews</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-lg text-mediumtext max-w-2xl mx-auto mb-4">Discover the magic in our clients' experiences across Orange County!</p>
+            <button id="open-yelp-modal" class="inline-flex items-center gap-2 text-primary hover:text-secondary transition duration-300 group">
+                <span class="text-base">Read All Reviews on Yelp</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Yelp Reviews Modal -->
+        <div id="yelp-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+            <div class="bg-white rounded-xl p-8 max-w-lg w-full mx-4 relative transform transition-all">
+                <button id="close-yelp-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-darktext mb-2">Choose Location</h3>
+                    <p class="text-mediumtext">Select a location to read their Yelp reviews</p>
+                </div>
+                <div class="space-y-4">
+                    <a href="https://www.yelp.com/biz/elegant-lashes-by-katie-irvine-irvine" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-4 bg-white hover:bg-gray-50 border border-primary rounded-lg text-center text-primary hover:text-secondary transition duration-300 group">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">Irvine Reviews</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://www.yelp.com/biz/elegant-lashes-by-katie-tustin-4" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-4 bg-white hover:bg-gray-50 border border-primary rounded-lg text-center text-primary hover:text-secondary transition duration-300 group">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">Tustin Reviews</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://www.yelp.com/biz/elegant-lashes-by-katie-santa-ana-11" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-4 bg-white hover:bg-gray-50 border border-primary rounded-lg text-center text-primary hover:text-secondary transition duration-300 group">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">Santa Ana Reviews</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://www.yelp.com/biz/elegant-lashes-by-katie-costa-mesa-3" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-4 bg-white hover:bg-gray-50 border border-primary rounded-lg text-center text-primary hover:text-secondary transition duration-300 group">
+                        <div class="flex items-center justify-between">
+                            <span class="font-medium">Costa Mesa Reviews</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location Tabs -->
+        <div class="grid grid-cols-2 md:flex md:flex-nowrap justify-center gap-4 mb-8">
+            <button class="location-tab active px-6 py-2 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg transition duration-300 text-primary hover:text-secondary font-medium text-center whitespace-nowrap" data-location="irvine">Irvine</button>
+            <button class="location-tab px-6 py-2 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg transition duration-300 text-primary hover:text-secondary font-medium text-center whitespace-nowrap" data-location="tustin">Tustin</button>
+            <button class="location-tab px-6 py-2 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg transition duration-300 text-primary hover:text-secondary font-medium text-center whitespace-nowrap" data-location="santaana">Santa Ana</button>
+            <button class="location-tab px-6 py-2 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg transition duration-300 text-primary hover:text-secondary font-medium text-center whitespace-nowrap" data-location="costamesa">Costa Mesa</button>
+        </div>
+
+        <!-- Reviews Container -->
+        <div class="reviews-container relative">
+            {Object.entries(reviews).map(([location, locationReviews]) => (
+                <div class={`location-reviews ${location === 'irvine' ? 'active' : 'hidden'}`} data-location={location}>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {locationReviews.map((review) => (
+                            <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 transform hover:-translate-y-2">
+                                <div class="flex items-start mb-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-skyblue to-primary rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                        {review.initials}
+                                    </div>
+                                    <div class="ml-4 flex-1">
+                                        <h4 class="font-bold text-darktext">{review.name}</h4>
+                                        <p class="text-sm text-mediumtext">{review.location}</p>
+                                        <div class="flex mt-1">
+                                            {[...Array(5)].map(() => (
+                                                <svg class="h-4 w-4 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                                </svg>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-mediumtext">{review.date}</span>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute -top-2 -left-2 w-8 h-8 bg-peach/10 rounded-full"></div>
+                                    <p class="text-darktext leading-relaxed">{review.text}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Tab switching functionality
+    const tabs = document.querySelectorAll('.location-tab');
+    const reviewContainers = document.querySelectorAll('.location-reviews');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const targetLocation = this.getAttribute('data-location');
+
+        // Update active tab
+        tabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+
+        // Update active review container
+        reviewContainers.forEach(container => {
+          container.classList.add('hidden');
+          container.classList.remove('active');
+        });
+
+        const targetContainer = document.querySelector(`.location-reviews[data-location="${targetLocation}"]`);
+        if (targetContainer) {
+          targetContainer.classList.remove('hidden');
+          targetContainer.classList.add('active');
+        }
+      });
+    });
+
+    // Modal functionality
+    const openModalBtn = document.getElementById('open-yelp-modal');
+    const closeModalBtn = document.getElementById('close-yelp-modal');
+    const modal = document.getElementById('yelp-modal');
+
+    openModalBtn?.addEventListener('click', function() {
+      modal?.classList.remove('hidden');
+      modal?.classList.add('flex');
+    });
+
+    closeModalBtn?.addEventListener('click', function() {
+      modal?.classList.add('hidden');
+      modal?.classList.remove('flex');
+    });
+
+    // Close modal when clicking outside
+    modal?.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  });
+</script>
+
+<style>
+  .location-tab.active {
+    @apply bg-primary text-white;
+  }
+
+  .decorative-sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #FFF 0%, transparent 70%);
+    border-radius: 50%;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+</style>

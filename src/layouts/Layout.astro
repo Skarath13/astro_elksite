@@ -1,0 +1,281 @@
+---
+import BookingModal from '../components/BookingModal.astro';
+import FAQModal from '../components/FAQModal.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+}
+
+const { title, description, keywords } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content={description}>
+    {keywords && <meta name="keywords" content={keywords}>}
+    <meta name="author" content="Elegant Lashes by Katie">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/ogimg.jpg">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://elegantlashesbykatie.com">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="theme-color" content="#AC5F77">
+    <meta name="geo.region" content="US-CA">
+    <meta name="geo.placename" content="Orange County, California">
+    <meta name="geo.position" content="33.7175;-117.8311">
+    <meta name="ICBM" content="33.7175, -117.8311">
+    <meta name="DC.title" content={title}>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content="/images/ogimg.jpg">
+    <title>{title}</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-46GKYLYXL2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-46GKYLYXL2');
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Elegant Lashes by Katie",
+      "alternateName": "Orange County's Best Lash Extension Salon",
+      "image": "/images/brand/flawless-lashes-logo.png",
+      "description": "Orange County's #1 rated lash extension salon offering volume, classic, and hybrid eyelash extensions. Professional lash artists serving Irvine, Tustin, Santa Ana, and Costa Mesa since 2016.",
+      "@id": "https://elegantlashesbykatie.com",
+      "url": "https://elegantlashesbykatie.com",
+      "telephone": "657-334-9919",
+      "email": "elegantlashesbykatie@gmail.com",
+      "sameAs": [
+        "https://instagram.com/elegantlashesbykatie"
+      ],
+      "servedCuisine": "Beauty Services",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Lash Extension Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Classic Lash Extensions",
+              "description": "Natural-looking lash extensions perfect for everyday wear"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Volume Lash Extensions",
+              "description": "Dramatic volume lashes for a glamorous look"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hybrid Lash Extensions",
+              "description": "Perfect blend of classic and volume techniques"
+            }
+          }
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Irvine",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Tustin",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Santa Ana",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Costa Mesa",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Orange County",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          }
+        }
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "15333 Culver Dr #220",
+          "addressLocality": "Irvine",
+          "addressRegion": "CA",
+          "postalCode": "92604",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "13112 Newport Ave #K",
+          "addressLocality": "Tustin",
+          "addressRegion": "CA",
+          "postalCode": "92780",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "3740 S Bristol St",
+          "addressLocality": "Santa Ana",
+          "addressRegion": "CA",
+          "postalCode": "92704",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "435 E 17th St #3",
+          "addressLocality": "Costa Mesa",
+          "addressRegion": "CA",
+          "postalCode": "92627",
+          "addressCountry": "US"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "priceRange": "$$",
+      "foundingDate": "2016",
+      "slogan": "Orange County's Most-Loved Lash Studio",
+      "paymentAccepted": "Credit Card, Cash",
+      "currenciesAccepted": "USD"
+    }
+    </script>
+
+    <!-- Structured Data for Appointment Preparation Guidelines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Prepare for Your Lash Extension Appointment",
+      "description": "Complete guide on how to prepare for your lash extension appointment at Orange County's premier lash salon",
+      "image": "https://elegantlashesbykatie.com/images/brand/flawless-lashes-logo.png",
+      "totalTime": "PT10M",
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Oil-free cleanser"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Clean spoolie brush"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Gentle makeup remover"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Clean Your Lashes",
+          "text": "Remove all eye makeup, oils, and skincare from your lashes and lids before your appointment",
+          "url": "https://elegantlashesbykatie.com/#prepare-appointment"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Use Oil-Free Products",
+          "text": "Use oil-free skincare products the night before your appointment",
+          "url": "https://elegantlashesbykatie.com/#prepare-appointment"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Shower Beforehand",
+          "text": "Take a shower before your appointment as you should avoid getting lashes wet for 24 hours after",
+          "url": "https://elegantlashesbykatie.com/#prepare-appointment"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Eat and Hydrate",
+          "text": "Have a light meal and stay hydrated before your 1.5-2 hour appointment",
+          "url": "https://elegantlashesbykatie.com/#prepare-appointment"
+        }
+      ],
+      "about": {
+        "@type": "Service",
+        "name": "Lash Extension Application",
+        "provider": {
+          "@type": "BeautySalon",
+          "name": "Elegant Lashes by Katie",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "CA",
+            "addressLocality": "Orange County"
+          }
+        }
+      }
+    }
+    </script>
+</head>
+<body class="antialiased">
+    <slot />
+    <BookingModal />
+    <FAQModal />
+</body>
+</html>

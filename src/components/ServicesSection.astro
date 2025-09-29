@@ -1,0 +1,249 @@
+---
+// Services Menu Section Component
+const services = {
+  newClientPromos: [
+    {
+      name: "Natural Wet Set",
+      emoji: "⚡️",
+      description: "Classic eyelash extensions Orange County with sleek wet-look finish for natural definition.",
+      fullDescription: "New Orange County clients can enjoy our Natural Wet Set lash extensions for just $75! This classic lash set gives the appearance of naturally defined lashes with a sleek, wet-look finish perfect for OC lifestyle.",
+      price: "$75",
+      image: "/images/menu/natural_wet_set_new_client.png",
+      alt: "New client special natural wet lash extensions Orange County - Classic wet look lashes Irvine Tustin Costa Mesa Santa Ana OC"
+    },
+    {
+      name: "Natural Set",
+      emoji: "🌿",
+      description: "Hybrid eyelash extensions Orange County combining classic and light volume for subtle enhancement.",
+      fullDescription: "First-time Orange County clients can enjoy our Natural Set hybrid lash extensions for just $75! This set combines classic lashes with light volume for a subtle, yet eye-enhancing look perfect for OC professionals.",
+      price: "$75",
+      image: "/images/menu/natural_set_new_client.png",
+      alt: "New client special natural hybrid lash extensions Orange County - Light volume natural lashes OC salon"
+    }
+  ],
+  volumeSets: [
+    {
+      name: "Natural Set",
+      emoji: "🌿",
+      description: "Beautiful hybrid mix of classic and light volume lash extensions Orange County.",
+      fullDescription: "Our Natural Set hybrid lash extensions Orange County feature a beautiful mix of classic lashes and light volume, perfect for Orange County clients seeking subtle, natural enhancement for work or beach days.",
+      price: "$95",
+      image: "/images/menu/natural_set_signature.png",
+      alt: "Natural hybrid lash extensions Orange County - Classic volume mix professional lash salon OC"
+    },
+    {
+      name: "Elegant Volume Set",
+      emoji: "✨",
+      description: "Popular volume lash extensions Orange County featuring natural-to-full volume fans with wispy styling.",
+      fullDescription: "Our most popular Orange County volume lash extensions feature natural-to-full volume fans and wispy-style lashes, perfect for a beautifully balanced, fuller look ideal for OC events and daily wear.",
+      price: "$105",
+      image: "/images/menu/elegant_volume_set_signature.png",
+      alt: "Elegant Russian volume lash extensions Orange County - Wispy Russian volume lashes professional salon OC"
+    },
+    {
+      name: "Mega Volume Set",
+      emoji: "💎",
+      description: "Bold and fluffy volume lash extensions Orange County for dramatic, elegant look.",
+      fullDescription: "The Mega Volume Set includes full volume lash extensions Orange County with bold, fluffy fans for a dramatic yet elegant look perfect for Orange County special occasions and nightlife.",
+      price: "$125",
+      image: "/images/menu/mega_volume_set_signature.png",
+      alt: "Mega Russian volume lash extensions Orange County - Dramatic fluffy Russian volume lashes expert salon OC"
+    },
+    {
+      name: "Super Mega Volume Set",
+      emoji: "💎💎",
+      description: "Ultra-voluminous mega volume lash extensions Orange County creating dramatic glamorous look.",
+      fullDescription: "Our most dramatic and luxurious Orange County lash extensions featuring ultra-voluminous mega volume fans for the ultimate glamorous look. Perfect for Orange County clients who love bold, statement lashes for red carpet events.",
+      price: "$135",
+      image: "/images/menu/super_mega_volume_set_signature.png",
+      alt: "Super mega Russian volume lash extensions Orange County - Ultra dramatic glamorous Russian volume lashes premium salon OC"
+    }
+  ],
+  designerSets: [
+    {
+      name: "Wispy Wet Set",
+      emoji: "💫",
+      description: "Wet-look lash extensions Orange County technique combined with wispy styling for natural glamour.",
+      fullDescription: "A unique combination of our wet-look lash extensions technique with wispy styling for a naturally glamorous effect perfect for Orange County beach lifestyle and social events.",
+      price: "$105",
+      image: "/images/menu/wispy_wet_set_designer.png",
+      alt: "Designer wispy wet lash extensions Orange County - Natural glamorous wet look lashes professional OC salon"
+    },
+    {
+      name: "Wispy Elegant Volume Set",
+      emoji: "🌸",
+      description: "Elegant Volume lash extensions Orange County with dramatic wispy arrangement for added texture.",
+      fullDescription: "Our signature Elegant Volume lash extensions Orange County with a wispy arrangement for a more dramatic, textured appearance ideal for Orange County professionals and influencers.",
+      price: "$105",
+      image: "/images/menu/wispy_elegant_volume_set_designer.png",
+      alt: "Designer wispy elegant Russian volume lash extensions Orange County - Textured dramatic Russian volume OC salon"
+    }
+  ]
+};
+---
+
+<section id="menu" class="bg-accent py-16 md:py-24">
+    <!-- Decorative Elements -->
+    <div class="decorative-blob" style="width: 350px; height: 350px; top: 10%; right: -100px; opacity: 0.2;"></div>
+    <div class="decorative-blob" style="width: 250px; height: 250px; bottom: 5%; left: -80px; opacity: 0.15; background: radial-gradient(circle, #FFCBB6 0%, #F4ADB8 70%, transparent 100%);"></div>
+    <div class="decorative-sparkle" style="top: 25%; left: 20%;"></div>
+    <div class="decorative-sparkle" style="bottom: 20%; right: 15%;"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center">
+            <h2 class="text-4xl md:text-5xl font-bold font-playfair text-darktext mb-4 relative inline-block">
+                Orange County Lash Extensions Menu
+                <div class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-peach opacity-70"></div>
+            </h2>
+            <p class="text-lg text-mediumtext max-w-2xl mx-auto mb-8">Experience luxury lash artistry with our premium Orange County eyelash extensions services and expert certified technicians</p>
+        </div>
+
+        <!-- New Client Promotions -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 mb-12 max-w-3xl mx-auto">
+            <h3 class="text-2xl font-bold text-center mb-4 text-primary">New Client Orange County Lash Extensions Promo ✨</h3>
+            <div class="space-y-4">
+                {services.newClientPromos.map((service) => (
+                    <button type="button" class="service-button open-modal-button w-full text-left">
+                        <div class="flex gap-4 items-center p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5">
+                            <div class="flex-1 min-w-0 space-y-1">
+                                <h4 class="font-semibold text-lg truncate">{service.name} {service.emoji}</h4>
+                                <p class="text-mediumtext text-sm line-clamp-3 md:hidden">{service.description}</p>
+                                <p class="text-mediumtext text-sm line-clamp-3 hidden md:block">{service.fullDescription}</p>
+                                <p class="text-primary font-bold text-xl">{service.price}</p>
+                            </div>
+                            <div class="w-28 h-28 flex-shrink-0">
+                                <img src={service.image} alt={service.alt} class="w-full h-full object-cover rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </button>
+                ))}
+            </div>
+        </div>
+
+        <!-- Signature Volume Sets -->
+        <div class="mb-12">
+            <h2 class="text-center text-3xl font-bold mb-6 text-darktext">Orange County Volume Lash Extensions</h2>
+            <p class="text-center text-mediumtext mb-8 max-w-2xl mx-auto">Our Signature Volume lash extensions Orange County are fully customizable to suit your unique style. Choose from our Natural, Elegant, or Mega Volume sets with premium lash extension techniques preferred by Orange County clients.</p>
+
+            <div class="space-y-4 max-w-3xl mx-auto">
+                {services.volumeSets.map((service) => (
+                    <button type="button" class="service-button open-modal-button w-full text-left">
+                        <div class="flex gap-4 items-center p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5">
+                            <div class="flex-1 min-w-0 space-y-1">
+                                <h4 class="font-semibold text-lg truncate">{service.name} {service.emoji}</h4>
+                                <p class="text-mediumtext text-sm line-clamp-3 md:hidden">{service.description}</p>
+                                <p class="text-mediumtext text-sm line-clamp-3 hidden md:block">{service.fullDescription}</p>
+                                <p class="text-primary font-bold text-xl">{service.price}</p>
+                            </div>
+                            <div class="w-28 h-28 flex-shrink-0">
+                                <img src={service.image} alt={service.alt} class="w-full h-full object-cover rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </button>
+                ))}
+            </div>
+        </div>
+
+        <!-- Designer Lash Collections -->
+        <div class="mb-12">
+            <h2 class="text-center text-3xl font-bold mb-6 text-darktext">Premium Designer Lash Extensions Orange County</h2>
+            <p class="text-center text-mediumtext mb-8 max-w-2xl mx-auto">Our Designer Lash Collections Orange County feature expertly crafted, pre-designed lash extension sets. These premium collections offer a polished finish with styles curated specifically for Orange County clientele to enhance your natural beauty.</p>
+
+            <div class="space-y-4 max-w-3xl mx-auto">
+                {services.designerSets.map((service) => (
+                    <button type="button" class="service-button open-modal-button w-full text-left">
+                        <div class="flex gap-4 items-center p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5">
+                            <div class="flex-1 min-w-0 space-y-1">
+                                <h4 class="font-semibold text-lg truncate">{service.name} {service.emoji}</h4>
+                                <p class="text-mediumtext text-sm line-clamp-3 md:hidden">{service.description}</p>
+                                <p class="text-mediumtext text-sm line-clamp-3 hidden md:block">{service.fullDescription}</p>
+                                <p class="text-primary font-bold text-xl">{service.price}</p>
+                            </div>
+                            <div class="w-28 h-28 flex-shrink-0">
+                                <img src={service.image} alt={service.alt} class="w-full h-full object-cover rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </button>
+                ))}
+            </div>
+        </div>
+
+        <!-- Additional Services -->
+        <div class="mb-12">
+            <h2 class="text-center text-3xl font-bold mb-6 text-darktext">Additional Services</h2>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-3">Lash Fill Appointments</h3>
+                    <p class="text-mediumtext mb-4">Maintain your beautiful lashes with our professional fill services every 2-3 weeks.</p>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>2 Week Fill</span>
+                            <span class="font-bold text-primary">$65</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>3 Week Fill</span>
+                            <span class="font-bold text-primary">$75</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>4+ Week Fill</span>
+                            <span class="font-bold text-primary">$85</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-3">Special Services</h3>
+                    <p class="text-mediumtext mb-4">Additional services to complete your lash experience.</p>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>Lash Removal</span>
+                            <span class="font-bold text-primary">$25</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Mascara Removal</span>
+                            <span class="font-bold text-primary">$15</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Consultation</span>
+                            <span class="font-bold text-primary">Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+            <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold text-darktext mb-4">Ready for Your Perfect Lashes?</h3>
+                <p class="text-mediumtext mb-6">Book your appointment at one of our 4 convenient Orange County locations</p>
+                <button type="button" class="open-modal-button main-book-now-btn">
+                    <span>Book Now</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .decorative-sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #FFF 0%, transparent 70%);
+    border-radius: 50%;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+</style>

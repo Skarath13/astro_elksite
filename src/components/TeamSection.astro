@@ -1,0 +1,283 @@
+---
+// Team/Technicians Section Component
+const teams = {
+  irvine: [
+    {
+      name: "Angela",
+      description: "Years of experience. Skilled in natural styles, but particularly known for fuller, voluminous sets including mega volume.",
+      image: "/images/team/irvine/angela.svg",
+      alt: "Angela - Expert lash technician Irvine Orange County - Mega Russian volume natural classic lash extensions"
+    },
+    {
+      name: "Celine",
+      description: "Skilled artist with a gentle touch. Expertise in both natural and volume lashes. Passion and dedication shine through.",
+      image: "/images/team/irvine/celine.svg",
+      alt: "Celine - Professional lash artist Irvine Orange County - Natural Russian volume lash extensions specialist"
+    },
+    {
+      name: "Elena",
+      description: "Premier technician mastering natural and wispy applications. Warm personality, excellent communication skills.",
+      image: "/images/team/irvine/elena.svg",
+      alt: "Elena - Premier lash technician Irvine Orange County - Natural wispy classic lash extensions expert"
+    },
+    {
+      name: "Tammy",
+      description: "Creates flawless volume fans. Specializes in natural volume, full/darker, mega volume, fluffy, wispy/spiked styles.",
+      image: "/images/team/irvine/tammy.svg",
+      alt: "Tammy - Expert lash technician Irvine Orange County - Mega Russian volume wispy fluffy lash extensions"
+    },
+    {
+      name: "Fiona",
+      description: "Efficient perfectionist specializing in natural, wispy, and anime styles. Known for her clean, precise application and attention to detail.",
+      image: "/images/team/irvine/fiona.svg",
+      alt: "Fiona - Professional lash artist Irvine Orange County - Anime wispy natural lash extensions specialist"
+    },
+    {
+      name: "Brenda",
+      description: "Skilled artist with expertise in creating beautiful, natural-looking lashes. Known for her attention to detail and client-focused approach.",
+      image: "/images/team/irvine/brenda.svg",
+      alt: "Brenda - Professional lash artist Irvine Orange County - Natural Russian volume lash extensions specialist"
+    }
+  ],
+  tustin: [
+    {
+      name: "Alice",
+      description: "Gentle and precise. Experienced in all types, customizes work. Creates beautiful natural or full-volume artistry.",
+      image: "/images/team/tustin/alice.svg",
+      alt: "Alice - Professional lash artist Tustin Orange County - Russian volume classic natural lash extensions expert"
+    },
+    {
+      name: "Amy",
+      description: "Provides amazing experiences. Known for fuller, darker styles. Specialties: super natural, natural volume, mega volume.",
+      image: "/images/team/tustin/amy.svg",
+      alt: "Amy - Expert lash technician Tustin Orange County - Mega Russian volume natural classic lash extensions"
+    },
+    {
+      name: "Helen",
+      description: "Skilled in creating beautiful, natural lashes with attention to detail. Specializes in volume techniques and client comfort.",
+      image: "/images/team/tustin/helen.svg",
+      alt: "Helen - Professional lash artist Tustin Orange County - Natural Russian volume super natural lash extensions"
+    },
+    {
+      name: "Emma",
+      description: "Talented professional specializing in all types. Committed to client happiness. Ideal for high-quality extensions.",
+      image: "/images/team/tustin/emma.svg",
+      alt: "Emma - Expert lash technician Tustin Orange County - Classic Russian volume natural lash extensions specialist"
+    },
+    {
+      name: "Sandy",
+      description: "Experienced artist with expertise in volume lashes. Known for creating stunning, full looks while maintaining natural beauty.",
+      image: "/images/team/tustin/sandy.svg",
+      alt: "Sandy - Professional lash artist Tustin Orange County - Mega Russian volume wispy wet full lash extensions"
+    },
+    {
+      name: "Maria",
+      description: "Versatile: super natural, natural-medium fullness, mega volume. Gentle, attentive. Perfect for first-timers.",
+      image: "/images/team/tustin/maria.svg",
+      alt: "Maria - Expert lash technician Tustin Orange County - Mega Russian volume natural gentle lash extensions"
+    },
+    {
+      name: "Wendy",
+      description: "Client favorite. Excellent consultations, cheerful demeanor. Expertise across all styles (natural to mega, wispy, cat-eye).",
+      image: "/images/team/tustin/wendy.svg",
+      alt: "Wendy - Expert lash technician Tustin Orange County - Mega Russian volume cat-eye wispy natural lash extensions"
+    },
+    {
+      name: "Katie",
+      description: "Founder with decades of experience, known for revolutionary natural, wispy looks and client comfort focus.",
+      image: "/images/team/tustin/katie.svg",
+      alt: "Katie - Founder expert lash artist Tustin Orange County - Russian volume wispy natural lash extensions specialist"
+    },
+    {
+      name: "Gabby",
+      description: "Talented in subtle natural & bold dramatic styles. Loves natural sets, especially renowned for mega volume.",
+      image: "/images/team/tustin/gabby.svg",
+      alt: "Gabby - Professional lash artist Tustin Orange County - Mega Russian volume dramatic natural lash extensions"
+    }
+  ],
+  santaana: [
+    {
+      name: "Giana",
+      description: "Highly skilled, experience from top salons. Excels in stunning volume lashes. Attentive & accommodating.",
+      image: "/images/team/santa-ana/giana.svg",
+      alt: "Giana - Professional lash artist Santa Ana Orange County - Stunning Russian volume lash extensions expert"
+    },
+    {
+      name: "Macy",
+      description: "Talented specialist, expertise in wide range of styles (full natural volume to dramatic). Dedicated to client satisfaction.",
+      image: "/images/team/santa-ana/macy.svg",
+      alt: "Macy - Expert lash technician Santa Ana Orange County - Dramatic Russian volume natural classic lash extensions"
+    },
+    {
+      name: "Nancy",
+      description: "Passion for client happiness. Meticulous detail, flawless natural & mega volume sets. Masters wispy, full, cat-eye.",
+      image: "/images/team/santa-ana/nancy.svg",
+      alt: "Nancy - Professional lash artist Santa Ana Orange County - Mega Russian volume cat-eye wispy natural lash extensions"
+    },
+    {
+      name: "Rosy",
+      description: "Renowned for beautiful, full-volume sets balancing natural & bold. Styles from super natural to mega volume.",
+      image: "/images/team/santa-ana/rosy.svg",
+      alt: "Rosy - Expert lash technician Santa Ana Orange County - Mega Russian volume full natural lash extensions specialist"
+    },
+    {
+      name: "Zara",
+      description: "Sweet, accommodating with detail-oriented precision. Known for her patient approach, loves creating natural volume lashes.",
+      image: "/images/team/santa-ana/zara.svg",
+      alt: "Zara - Professional lash artist Santa Ana Orange County - Natural volume patient gentle lash extensions specialist"
+    },
+    {
+      name: "Mayra",
+      description: "Talented technician specializing in volume lashes and dramatic styles. Known for creating stunning transformations with meticulous attention to detail.",
+      image: "/images/team/santa-ana/mayra.svg",
+      alt: "Mayra - Professional lash artist Santa Ana Orange County - Volume dramatic lash extensions specialist"
+    }
+  ],
+  costamesa: [
+    {
+      name: "Chloe",
+      description: "Cheerful & welcoming. Excels at super natural, wispy natural, natural volume, and medium-full styles. Gentle hands.",
+      image: "/images/team/costa-mesa/chloe.svg",
+      alt: "Chloe - Professional lash artist Costa Mesa Orange County - Wispy natural Russian volume gentle lash extensions"
+    },
+    {
+      name: "Lucy",
+      description: "Gentle, skilled, experienced in all styles. Ideal for first-timers, offers consultations. Attentive & focused.",
+      image: "/images/team/costa-mesa/lucy.svg",
+      alt: "Lucy - Expert lash technician Costa Mesa Orange County - Classic natural gentle lash extensions specialist"
+    },
+    {
+      name: "Melissa",
+      description: "Highly skilled, renowned for natural-looking lashes (subtle or full volume). Sweet, welcoming attitude.",
+      image: "/images/team/costa-mesa/melissa.svg",
+      alt: "Melissa - Professional lash artist Costa Mesa Orange County - Natural Russian volume classic lash extensions expert"
+    },
+    {
+      name: "Natalie",
+      description: "Gentle, sweet, beloved by clients. Loves creating wet lash styles (top favorite). Calm & professional.",
+      image: "/images/team/costa-mesa/natalie.svg",
+      alt: "Natalie - Expert lash technician Costa Mesa Orange County - Wet lash natural gentle lash extensions specialist"
+    },
+    {
+      name: "Trish",
+      description: "Steadiest hands, perfect volume hand-made fans. Specializes in volume, mega volume, full, fluffy styles. Even, clean look.",
+      image: "/images/team/costa-mesa/trish.svg",
+      alt: "Trish - Professional lash artist Costa Mesa Orange County - Mega Russian volume fluffy full lash extensions expert"
+    },
+    {
+      name: "Vivian",
+      description: "Rare talent. Young but skills on par with veterans. Care and warmth. Expertise in all lash types.",
+      image: "/images/team/costa-mesa/vivian.svg",
+      alt: "Vivian - Expert lash technician Costa Mesa Orange County - Classic natural Russian volume lash extensions specialist"
+    }
+  ]
+};
+
+const locations = [
+  { key: 'irvine', name: 'Irvine Team', address: 'Culver Dr Location' },
+  { key: 'tustin', name: 'Tustin Team', address: 'Newport Ave Location' },
+  { key: 'santaana', name: 'Santa Ana Team', address: 'Bristol St Location' },
+  { key: 'costamesa', name: 'Costa Mesa Team', address: '17th St Location' }
+];
+---
+
+<section id="technicians" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-bold font-playfair text-center text-darktext mb-14">Meet Our Amazing Technicians</h2>
+
+        <!-- Team Location Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-7xl mx-auto mb-12">
+            {locations.map((location) => (
+                <div class="transform transition-all duration-300 hover:-translate-y-1">
+                    <button class="location-btn w-full text-left bg-gradient-to-br from-accent via-accent/80 to-accent/60 p-4 lg:p-6 rounded-xl hover:shadow-lg transition-all duration-300 border-t-4 border-primary/30" data-location={location.key}>
+                        <div class="flex items-center justify-between">
+                            <div class="whitespace-nowrap overflow-hidden">
+                                <h3 class="text-base lg:text-xl font-bold font-playfair text-darktext mb-1">{location.name}</h3>
+                                <p class="text-xs lg:text-xs text-mediumtext">{location.address}</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            ))}
+        </div>
+
+        <!-- Team Members Display -->
+        <div class="team-display">
+            {Object.entries(teams).map(([locationKey, members]) => (
+                <div class="team-container hidden" data-location={locationKey}>
+                    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                        {members.map((member) => (
+                            <div class="bg-accent/40 p-6 rounded-lg shadow-lg flex items-start gap-5 transform hover:scale-105 transition-all duration-300">
+                                <img src={member.image} alt={member.alt} class="h-20 w-20 rounded-full object-cover flex-shrink-0 shadow-md">
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-semibold text-darktext mb-3">{member.name}</h4>
+                                    <p class="text-sm text-mediumtext leading-relaxed">{member.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-12">
+            <div class="bg-gradient-to-r from-accent to-accent/60 rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold text-darktext mb-6">Ready to Meet Your Artist?</h3>
+                <button type="button" class="open-modal-button main-book-now-btn">
+                    <span>Book Now</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const locationButtons = document.querySelectorAll('.location-btn');
+    const teamContainers = document.querySelectorAll('.team-container');
+
+    locationButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const targetLocation = this.getAttribute('data-location');
+
+        // Update active button
+        locationButtons.forEach(btn => {
+          btn.classList.remove('active-location');
+        });
+        this.classList.add('active-location');
+
+        // Update active team container
+        teamContainers.forEach(container => {
+          container.classList.add('hidden');
+          container.classList.remove('active');
+        });
+
+        const targetContainer = document.querySelector(`.team-container[data-location="${targetLocation}"]`);
+        if (targetContainer) {
+          targetContainer.classList.remove('hidden');
+          targetContainer.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .location-btn.active-location {
+    @apply border-primary bg-gradient-to-br from-primary/10 via-accent to-accent/60;
+  }
+
+  .team-container {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+</style>

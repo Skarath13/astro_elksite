@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Lash Extension Services Orange County | Volume, Classic, Hybrid Lashes | Elegant Lashes by Katie"
+  description="Explore our complete menu of lash extension services in Orange County. Volume, classic, hybrid, and designer lash sets. New client specials starting at $75!"
+  keywords="lash extension services Orange County, volume lashes OC, classic lashes Orange County, hybrid lashes OC, lash extension menu, lash extension prices Orange County, Russian volume lashes OC"
+>
+  <Navigation />
+
+  <main class="pt-20">
+    <div class="bg-gradient-ghibli py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold font-playfair text-darktext mb-4">
+          Our Lash Extension Services
+        </h1>
+        <p class="text-xl text-mediumtext mb-8">
+          Discover the perfect lash set for your style at Orange County's premier lash salon
+        </p>
+      </div>
+    </div>
+
+    <ServicesSection />
+  </main>
+
+  <Footer />
+</Layout>

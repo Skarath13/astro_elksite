@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import GallerySection from '../components/GallerySection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Lash Extension Gallery Orange County | Before & After Photos | Elegant Lashes by Katie"
+  description="View our stunning lash extension transformations! Browse our Instagram gallery featuring volume, classic, and hybrid lash work from Orange County's top salon."
+  keywords="lash extension gallery Orange County, before after lash photos OC, Instagram lash gallery, lash transformation photos Orange County, lash extension results OC"
+>
+  <Navigation />
+
+  <main class="pt-20">
+    <div class="bg-gradient-ghibli py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold font-playfair text-darktext mb-4">
+          Lash Transformation Gallery
+        </h1>
+        <p class="text-xl text-mediumtext mb-8">
+          See the stunning results from Orange County's premier lash extension salon
+        </p>
+      </div>
+    </div>
+
+    <GallerySection />
+  </main>
+
+  <Footer />
+</Layout>

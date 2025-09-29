@@ -1,0 +1,149 @@
+<!-- Booking Modal -->
+<div id="booking-modal" class="modal fixed inset-0 z-[60] hidden">
+    <div class="modal-overlay absolute inset-0 bg-black/50"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-xl shadow-lg z-50 overflow-y-auto fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-h-[90vh]">
+        <div class="modal-content p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-3xl font-playfair font-semibold text-darktext">Select Booking Location</h3>
+                <button class="modal-close">
+                    <svg class="w-6 h-6 text-darktext" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <button type="button" data-location="Irvine" class="location-select-button block w-full text-center btn-ghibli hover:shadow-xl py-4 px-5 text-lg">
+                    Book Irvine
+                </button>
+                <button type="button" data-location="Tustin" class="location-select-button block w-full text-center btn-ghibli hover:shadow-xl py-4 px-5 text-lg">
+                    Book Tustin
+                </button>
+                <button type="button" data-location="Santa Ana" class="location-select-button block w-full text-center btn-ghibli hover:shadow-xl py-4 px-5 text-lg">
+                    Book Santa Ana
+                </button>
+                <button type="button" data-location="Costa Mesa" class="location-select-button block w-full text-center btn-ghibli hover:shadow-xl py-4 px-5 text-lg">
+                    Book Costa Mesa
+                </button>
+            </div>
+            <p class="text-center text-xs text-mediumtext mt-6">You will be redirected to our secure online booking platform.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal.active .modal-overlay {
+    opacity: 1;
+}
+
+.modal-container {
+    transform: translate(-50%, calc(-50% + 20px));
+    transition: transform 0.2s ease;
+}
+
+.modal.active .modal-container {
+    transform: translate(-50%, -50%);
+}
+
+.btn-ghibli {
+    background: linear-gradient(135deg, #FFF0F5 0%, #F4ADB8 50%, #FFCBB6 100%);
+    color: #5D4A54;
+    border: 2px solid rgba(229, 127, 159, 0.3);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-ghibli:hover {
+    transform: translateY(-2px);
+    border-color: rgba(229, 127, 159, 0.6);
+    background: linear-gradient(135deg, #F4ADB8 0%, #E57F9F 50%, #FFCBB6 100%);
+    color: white;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('booking-modal');
+    const openButtons = document.querySelectorAll('.open-modal-button');
+    const closeButton = modal?.querySelector('.modal-close');
+    const overlay = modal?.querySelector('.modal-overlay');
+    const locationButtons = modal?.querySelectorAll('.location-select-button');
+
+    // Square booking URLs for each location
+    const bookingUrls = {
+        'Irvine': 'https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/LC0CZ4AZ7TKXS/services',
+        'Tustin': 'https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/G0X353MBKGTCW/services',
+        'Santa Ana': 'https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/LZMX8CTA69S7E/services',
+        'Costa Mesa': 'https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/LVMKS7ERWS3KP/services'
+    };
+
+    function openModal() {
+        if (modal) {
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal() {
+        if (modal) {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 250);
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Open modal when "Book Now" buttons are clicked
+    openButtons.forEach(button => {
+        button.addEventListener('click', openModal);
+    });
+
+    // Close modal
+    closeButton?.addEventListener('click', closeModal);
+    overlay?.addEventListener('click', closeModal);
+
+    // Handle location selection
+    locationButtons?.forEach(button => {
+        button.addEventListener('click', function() {
+            const location = this.getAttribute('data-location');
+            const bookingUrl = bookingUrls[location];
+
+            if (bookingUrl) {
+                window.open(bookingUrl, '_blank');
+            } else {
+                // Fallback - redirect to main booking page
+                window.open('https://elegantlashesbykatie.com/book', '_blank');
+            }
+
+            closeModal();
+        });
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
+</script>

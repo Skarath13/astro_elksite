@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout
+  title="About Elegant Lashes by Katie | Orange County's Premier Lash Salon"
+  description="Learn about Orange County's #1 rated lash extension salon. Expert technicians with 50+ years combined experience serving Irvine, Tustin, Santa Ana & Costa Mesa."
+>
+  <Navigation />
+
+  <main class="pt-20">
+    <div class="bg-gradient-ghibli min-h-screen py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold font-playfair text-darktext mb-4">
+            About Elegant Lashes by Katie
+          </h1>
+          <p class="text-xl text-mediumtext">
+            Orange County's most trusted lash extension salon since 2016
+          </p>
+        </div>
+
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 mb-8">
+          <h2 class="text-3xl font-bold text-primary mb-6">Our Story</h2>
+          <p class="text-lg text-darktext mb-4">
+            Founded in 2016, Elegant Lashes by Katie has grown from a single location to Orange County's premier lash extension destination with four convenient locations across Irvine, Tustin, Santa Ana, and Costa Mesa.
+          </p>
+          <p class="text-lg text-darktext mb-4">
+            Our mission is simple: to enhance your natural beauty with expertly applied lash extensions that make you feel confident and gorgeous every day.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold text-primary mb-4">Expert Team</h3>
+            <p class="text-darktext">
+              Our certified lash artists bring over 50 years of combined experience, staying current with the latest techniques and trends in lash extensions.
+            </p>
+          </div>
+
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold text-primary mb-4">Premium Products</h3>
+            <p class="text-darktext">
+              We use only the highest quality lashes and adhesives, ensuring your extensions look beautiful and last longer while being gentle on your natural lashes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

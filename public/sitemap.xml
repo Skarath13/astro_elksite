@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
+  <url>
+    <loc>https://elegantlashesbykatie.com</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://elegantlashesbykatie.com/images/home/lash.PNG</image:loc>
+      <image:caption>Best lash extensions Orange County - Professional volume and classic lashes</image:caption>
+      <image:title>Orange County Premier Lash Extension Salon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Main Sections -->
+  <url>
+    <loc>https://elegantlashesbykatie.com/#about</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elegantlashesbykatie.com/#locations</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elegantlashesbykatie.com/#menu</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elegantlashesbykatie.com/#reviews</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elegantlashesbykatie.com/#technicians</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elegantlashesbykatie.com/#aftercare</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elegantlashesbykatie.com/#prepare-appointment</loc>
+    <lastmod>2025-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elegantlashesbykatie.com/#contact</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elegantlashesbykatie.com/#instagram</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elegantlashesbykatie.com/blog</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset> 

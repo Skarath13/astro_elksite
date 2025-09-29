@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /components/
+Allow: /css/
+Allow: /js/
+
+# Prevent access to any sensitive directories
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://elegantlashesbykatie.com/sitemap.xml 

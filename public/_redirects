@@ -1,0 +1,9 @@
+# Netlify redirects file
+# Blog clean URL redirect
+/blog.html    /blog    301
+
+# Redirect blog directory access to clean URL  
+/blog/        /blog    301
+
+# All other routes to SPA
+/*    /index.html   200

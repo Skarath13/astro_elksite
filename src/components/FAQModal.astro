@@ -4,23 +4,25 @@
 
 <!-- FAQ Modal -->
 <div id="faq-modal" class="fixed inset-0 z-[9999] hidden" style="background-color: rgba(0, 0, 0, 0.5);">
-    <div class="absolute inset-0 flex items-center justify-center p-4">
-        <div class="bg-white w-full max-w-3xl rounded-xl shadow-xl overflow-y-auto max-h-[90vh] relative">
-        <div class="modal-content p-6">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-3xl font-playfair font-semibold text-darktext">Frequently Asked Questions</h3>
-                <button class="modal-close">
-                    <svg class="w-6 h-6 text-darktext" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="absolute inset-0 flex items-center justify-center p-2 sm:p-4">
+        <div class="bg-white w-full max-w-3xl rounded-xl shadow-xl overflow-y-auto max-h-[95vh] sm:max-h-[90vh] relative">
+        <div class="modal-content p-4 sm:p-6">
+            <div class="flex justify-between items-center mb-4 sm:mb-6 sticky top-0 bg-white z-10 pb-4 border-b border-secondary/20">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-playfair font-semibold text-darktext">Frequently Asked Questions</h3>
+                <button class="modal-close p-2 hover:bg-gray-100 rounded-lg transition">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-darktext" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
             <!-- FAQ Content -->
-            <div class="space-y-4">
+            <div class="space-y-3 sm:space-y-4">
                 <!-- Basic Questions -->
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">✨</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
                         <h4>What are Eyelash Extensions?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -33,7 +35,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🌱</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C10.34 2 9 3.34 9 5C9 6.66 10.34 8 12 8C13.66 8 15 6.66 15 5C15 3.34 13.66 2 12 2ZM21 9H15V22H13V16H11V22H9V9H3V7H21V9Z"/>
+                        </svg>
                         <h4>Will It Damage My Natural Lashes?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -46,7 +50,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🎨</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.71 7.04C21.1 6.65 21.1 6 20.71 5.63L18.37 3.29C18 2.9 17.35 2.9 16.96 3.29L15.12 5.12L18.87 8.87M3 17.25V21H6.75L17.81 9.93L14.06 6.18L3 17.25Z"/>
+                        </svg>
                         <h4>How Are Eyelash Extensions Applied?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -59,7 +65,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🦋</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,17.5C14.33,17.5 16.3,16.04 17.11,14H6.89C7.69,16.04 9.67,17.5 12,17.5M8.5,11A1.5,1.5 0 0,0 10,9.5A1.5,1.5 0 0,0 8.5,8A1.5,1.5 0 0,0 7,9.5A1.5,1.5 0 0,0 8.5,11M15.5,11A1.5,1.5 0 0,0 17,9.5A1.5,1.5 0 0,0 15.5,8A1.5,1.5 0 0,0 14,9.5A1.5,1.5 0 0,0 15.5,11M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
+                        </svg>
                         <h4>Will the Service Hurt?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -72,7 +80,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🌟</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
+                        </svg>
                         <h4>How Long Will My Eyelash Extensions Last?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -85,7 +95,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🌸</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,3L2,12H5V20H19V12H22L12,3M11.5,18H10V14H8L11.5,9.5V18M13.5,18V9.5L17,14H15V18H13.5Z"/>
+                        </svg>
                         <h4>What Can I Do to Make My Lashes Stay Longer?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -98,7 +110,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🎭</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"/>
+                        </svg>
                         <h4>What Will They Look Like on Me?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -111,7 +125,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🔄</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"/>
+                        </svg>
                         <h4>How Often Do I Need to Get Them Touched-Up?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -124,7 +140,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🎨</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.71,4.63L19.37,3.29C19,2.9 18.35,2.9 17.96,3.29L9,12.25L11.75,15L20.71,6.04C21.1,5.65 21.1,5 20.71,4.63M7,14A3,3 0 0,0 4,17C4,18.31 2.84,19 2,19C2.92,20.22 4.5,21 6,21A4,4 0 0,0 10,17A3,3 0 0,0 7,14Z"/>
+                        </svg>
                         <h4>Can I Still Wear My Usual Makeup?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -138,7 +156,9 @@
                 <!-- Advanced Questions -->
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">💧</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,3.25C12.41,3.25 12.75,3.59 12.75,4C12.75,4.41 12.41,4.75 12,4.75C7.58,4.75 4,8.33 4,12.75C4,17.17 7.58,20.75 12,20.75C16.42,20.75 20,17.17 20,12.75C20,11.78 19.78,10.85 19.37,10H17.74C18.14,10.64 18.37,11.39 18.37,12.19C18.37,15.23 15.93,17.67 12.89,17.67C9.85,17.67 7.41,15.23 7.41,12.19C7.41,9.15 9.85,6.71 12.89,6.71C14.07,6.71 15.17,7.09 16.09,7.74L17.5,6.34C16.27,5.42 14.74,4.87 13.12,4.87C12.75,4.87 12.37,4.89 12,4.93C12,4.44 12,3.95 12,3.46L12,3.25M21,3V9H15L17.93,6.06C16.73,5.06 15.24,4.43 13.6,4.23C13.21,4.19 12.81,4.17 12.41,4.17V2.17C12.81,2.17 13.21,2.19 13.6,2.23C16.04,2.5 18.22,3.54 19.93,5.15L21,3M12,8C10.22,8 8.78,9.44 8.78,11.22C8.78,13 10.22,14.44 12,14.44C13.78,14.44 15.22,13 15.22,11.22C15.22,9.44 13.78,8 12,8Z"/>
+                        </svg>
                         <h4>Can I Get Them Wet Right Away?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -151,7 +171,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🌿</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                        </svg>
                         <h4>How Should I Take Care of My New Eyelash Extensions?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -164,7 +186,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🧪</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,1L8,5H11V14H13V5H16M18,23H6C4.89,23 4,22.1 4,21V9A2,2 0 0,1 6,7H9V9H6V21H18V9H15V7H18A2,2 0 0,1 20,9V21A2,2 0 0,1 18,23Z"/>
+                        </svg>
                         <h4>Are the Adhesive Chemicals You Use Safe?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -177,7 +201,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">⏳</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,9.5A1.5,1.5 0 0,1 11.5,11A1.5,1.5 0 0,1 10,12.5A1.5,1.5 0 0,1 8.5,11A1.5,1.5 0 0,1 10,9.5M14.5,9.5A1.5,1.5 0 0,1 16,11A1.5,1.5 0 0,1 14.5,12.5A1.5,1.5 0 0,1 13,11A1.5,1.5 0 0,1 14.5,9.5M17,17H7V15.5C7,15.5 10,14 12.5,14C15,14 17.5,15.5 17.5,15.5V17Z"/>
+                        </svg>
                         <h4>How Long Will the Service Last?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -190,7 +216,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🎯</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M16.59,7.58L10,14.17L7.41,11.59L6,13L10,17L18,9L16.59,7.58Z"/>
+                        </svg>
                         <h4>What Look Is Best for Me?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -203,7 +231,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">📏</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3,5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5M7,7V17H9V7H7M11,7V17H13V7H11M15,7V17H17V7H15Z"/>
+                        </svg>
                         <h4>What Length of Lashes Should I Get?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -216,7 +246,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">↗️</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M15,18V16H6V18H15M18,14V12H6V14H18Z"/>
+                        </svg>
                         <h4>Why Do My Lashes Lay Sideways After a Few Weeks?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -229,7 +261,9 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🍃</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.66,11.2C17.43,10.9 17.15,10.64 16.89,10.38C16.22,9.78 15.46,9.35 14.82,8.72C13.33,7.26 13,4.85 13.95,3C13,3.23 12.17,3.75 11.46,4.32C8.87,6.4 7.85,10.07 9.07,13.22C9.11,13.32 9.15,13.42 9.15,13.55C9.15,13.77 9,13.97 8.8,14.05C8.57,14.15 8.33,14.09 8.14,13.93C8.08,13.88 8.04,13.83 8,13.76C6.87,12.33 6.69,10.28 7.45,8.64C5.78,10 4.87,12.3 5,14.47C5.06,14.97 5.12,15.47 5.29,15.97C5.43,16.57 5.7,17.17 6,17.7C7.08,19.43 8.95,20.67 10.96,20.92C13.1,21.19 15.39,20.8 17.03,19.32C18.86,17.66 19.5,15 18.56,12.72L18.43,12.46C18.22,12 17.66,11.2 17.66,11.2M14.5,17.5C14.22,17.74 13.76,18 13.4,18.1C12.28,18.5 11.16,17.94 10.5,17.28C11.69,17 12.4,16.12 12.61,15.23C12.78,14.43 12.46,13.77 12.33,13C12.21,12.26 12.23,11.63 12.5,10.94C12.69,11.32 12.89,11.7 13.13,12C13.9,13 15.11,13.44 15.37,14.8C15.41,14.94 15.43,15.08 15.43,15.23C15.46,16.05 15.1,16.95 14.5,17.5H14.5Z"/>
+                        </svg>
                         <h4>Why Do My Real Lashes Fall Out?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -242,7 +276,11 @@
 
                 <div class="faq-card">
                     <button class="faq-question w-full text-left" aria-expanded="false">
-                        <div class="faq-icon">🌙</div>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"/>
+                            <rect x="11" y="6" width="2" height="7"/>
+                            <rect x="11" y="15" width="2" height="2"/>
+                        </svg>
                         <h4>Do I Need to Take a Break from Lashes?</h4>
                         <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -294,12 +332,19 @@
 <style>
 .faq-card {
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 1rem;
-    padding: 1.25rem;
+    border-radius: 0.75rem;
+    padding: 0.875rem;
     border: 2px solid rgba(244, 173, 184, 0.3);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+@media (min-width: 640px) {
+    .faq-card {
+        border-radius: 1rem;
+        padding: 1.25rem;
+    }
 }
 
 .faq-card:hover {
@@ -314,7 +359,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 3px;
     background: linear-gradient(to right, #FFCBB6, #E57F9F, #F4ADB8);
     opacity: 0.7;
 }
@@ -323,28 +368,47 @@
     width: 100%;
     display: flex;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 0.5rem;
     padding: 0.25rem;
     cursor: pointer;
 }
 
+@media (min-width: 640px) {
+    .faq-question {
+        gap: 0.75rem;
+    }
+}
+
 .faq-question h4 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: #5D4A54;
     font-weight: 600;
     flex-grow: 1;
     text-align: left;
-    padding-right: 2rem;
+    line-height: 1.4;
+}
+
+@media (min-width: 640px) {
+    .faq-question h4 {
+        font-size: 1.1rem;
+    }
 }
 
 .faq-arrow {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.125rem;
+    height: 1.125rem;
     color: #E57F9F;
     transition: transform 0.3s ease;
     flex-shrink: 0;
-    margin-top: 0.25rem;
+    margin-top: 0.125rem;
+}
+
+@media (min-width: 640px) {
+    .faq-arrow {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
 }
 
 .faq-question[aria-expanded="true"] .faq-arrow {
@@ -356,25 +420,59 @@
     opacity: 0;
     overflow: hidden;
     transition: all 0.3s ease-out;
-    padding: 0 1rem 0 3rem;
+    padding: 0 0.5rem 0 2rem;
+}
+
+@media (min-width: 640px) {
+    .faq-answer {
+        padding: 0 1rem 0 3rem;
+    }
 }
 
 .faq-answer.show {
     max-height: 1000px;
     opacity: 1;
-    padding: 1rem 1rem 0.5rem 3rem;
+    padding: 0.75rem 0.5rem 0.5rem 2rem;
+}
+
+@media (min-width: 640px) {
+    .faq-answer.show {
+        padding: 1rem 1rem 0.5rem 3rem;
+    }
 }
 
 .faq-answer p {
     color: #8A7584;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+    .faq-answer p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 }
 
 .faq-icon {
-    font-size: 1.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    color: #E57F9F;
+    fill: #E57F9F;
     flex-shrink: 0;
     margin-top: 0.125rem;
+    display: block;
+}
+
+@media (min-width: 640px) {
+    .faq-icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        min-width: 1.75rem;
+        min-height: 1.75rem;
+    }
 }
 
 .fancy-scrollbar {

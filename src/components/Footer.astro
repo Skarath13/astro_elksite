@@ -1,5 +1,5 @@
 ---
-// Footer Component
+import { Image } from 'astro:assets';
 ---
 
 <footer class="bg-darktext text-white py-12">
@@ -8,7 +8,14 @@
             <!-- Brand -->
             <div class="md:col-span-4">
                 <div class="flex items-center mb-4">
-                    <img src="/images/brand/flawless-lashes-logo.png" alt="Elegant Lashes by Katie Logo" class="h-12 w-auto">
+                    <Image
+                        src="/images/brand/flawless-lashes-logo.png"
+                        alt="Elegant Lashes by Katie - Premier Orange County lash extension salon logo serving Irvine Tustin Costa Mesa Santa Ana"
+                        width={200}
+                        height={48}
+                        class="h-12 w-auto"
+                        loading="lazy"
+                    />
                 </div>
                 <p class="text-white font-sans text-base mb-4 leading-relaxed">Orange County's premier<br>lash extension salon with<br>4 convenient locations.</p>
                 <div class="flex items-center gap-4">

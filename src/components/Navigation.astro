@@ -1,5 +1,5 @@
 ---
-// Navigation component for Astro
+import { Image } from 'astro:assets';
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#4A3463] to-[#2D1B44] shadow-lg backdrop-blur-sm bg-opacity-95">
@@ -8,7 +8,14 @@
             <div class="flex">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="/" class="font-playfair text-xl font-bold text-white hover:text-[#E6C7FF] transition duration-300 flex items-center gap-1">
-                        <img src="/images/brand/flawless-lashes-logo.png" alt="Elegant Lashes by Katie - Premier Orange County lash extension salon logo Irvine Tustin Costa Mesa Santa Ana" class="h-14 w-auto">
+                        <Image
+                            src="/images/brand/flawless-lashes-logo.png"
+                            alt="Elegant Lashes by Katie - Premier Orange County lash extension salon logo Irvine Tustin Costa Mesa Santa Ana"
+                            width={200}
+                            height={56}
+                            class="h-14 w-auto"
+                            loading="eager"
+                        />
                     </a>
                 </div>
                 <div class="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-3">
@@ -21,7 +28,7 @@
                     <a href="/gallery" class="nav-link border-transparent text-[#F2E1FF] hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Gallery</a>
                     <a href="/aftercare" class="nav-link border-transparent text-[#F2E1FF] hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">After Care</a>
                     <a href="/contact" class="nav-link border-transparent text-[#F2E1FF] hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Contact</a>
-                    <button type="button" data-modal="faq" class="nav-link border-transparent text-[#F2E1FF] hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">FAQ</button>
+                    <a href="/faq" class="nav-link border-transparent text-[#F2E1FF] hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">FAQ</a>
                     <button type="button" class="open-shop-modal nav-link border-transparent text-[#F2E1FF] hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Shop</button>
                     <a href="https://squareup.com/gift/Q4KP2Z7BWRWKZ/order" target="_blank" rel="noopener noreferrer" class="nav-link text-[#F2E1FF] hover:text-white inline-flex items-center px-1 pt-1 text-sm font-medium whitespace-nowrap">Gift Cards</a>
                     <button type="button" class="open-modal-button main-book-now-btn"><span>Book Now</span></button>
@@ -47,7 +54,7 @@
             <a href="/gallery" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-[#E6C7FF] hover:text-white hover:bg-[#4A3463] hover:border-[#9B6FB6]">Gallery</a>
             <a href="/aftercare" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-[#E6C7FF] hover:text-white hover:bg-[#4A3463] hover:border-[#9B6FB6]">After Care</a>
             <a href="/contact" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-[#E6C7FF] hover:text-white hover:bg-[#4A3463] hover:border-[#9B6FB6]">Contact</a>
-            <button type="button" data-modal="faq" class="block w-full text-left pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-[#E6C7FF] hover:text-white hover:bg-[#4A3463] hover:border-[#9B6FB6]">FAQ</button>
+            <a href="/faq" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-[#E6C7FF] hover:text-white hover:bg-[#4A3463] hover:border-[#9B6FB6]">FAQ</a>
             <button type="button" class="open-shop-modal block w-full text-left pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-[#E6C7FF] hover:text-white hover:bg-[#4A3463] hover:border-[#9B6FB6]">Shop</button>
             <a href="https://squareup.com/gift/Q4KP2Z7BWRWKZ/order" target="_blank" rel="noopener noreferrer" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-[#E6C7FF] hover:text-white hover:bg-[#4A3463] hover:border-[#9B6FB6]">Gift Cards</a>
             <button type="button" class="open-modal-button main-book-now-btn w-full text-left mt-2"><span>Book Now</span></button>

@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 // Services Menu Section Component
 const services = {
   newClientPromos: [
@@ -77,6 +79,24 @@ const services = {
       price: "$105",
       image: "/images/menu/wispy_elegant_volume_set_designer.png",
       alt: "Designer wispy elegant Russian volume lash extensions Orange County - Textured dramatic Russian volume OC salon"
+    },
+    {
+      name: "Anime/Manga Style Lashes",
+      emoji: "🌸",
+      description: "Japanese animation-inspired lash extensions Orange County with dramatic length and volume patterns.",
+      fullDescription: "Inspired by Japanese animation, these Orange County lash extensions feature dramatic length and volume patterns perfect for Orange County anime enthusiasts and cosplay events.",
+      price: "$105",
+      image: "/images/menu/anime_manga_style_lashes_designer.png",
+      alt: "Designer anime manga style lash extensions Orange County - Dramatic length volume Japanese inspired OC salon"
+    },
+    {
+      name: "Top and Bottom Lashes Set",
+      emoji: "🎀",
+      description: "Perfectly matched lash extensions Orange County for both top and bottom lashes.",
+      fullDescription: "Complete eye enhancement with perfectly matched top and bottom lash extensions Orange County for the ultimate dramatic look favored by Orange County celebrities and fashion enthusiasts.",
+      price: "$135",
+      image: "/images/menu/top_and_bottom_lashes_set_designer.png",
+      alt: "Designer top and bottom lash extensions Orange County - Complete eye enhancement premium service OC salon"
     }
   ]
 };
@@ -112,7 +132,14 @@ const services = {
                                 <p class="text-primary font-bold text-xl">{service.price}</p>
                             </div>
                             <div class="w-28 h-28 flex-shrink-0">
-                                <img src={service.image} alt={service.alt} class="w-full h-full object-cover rounded-lg shadow-md">
+                                <Image
+                                    src={service.image}
+                                    alt={service.alt}
+                                    width={112}
+                                    height={112}
+                                    class="w-full h-full object-cover rounded-lg shadow-md"
+                                    loading="lazy"
+                                />
                             </div>
                         </div>
                     </button>
@@ -136,7 +163,14 @@ const services = {
                                 <p class="text-primary font-bold text-xl">{service.price}</p>
                             </div>
                             <div class="w-28 h-28 flex-shrink-0">
-                                <img src={service.image} alt={service.alt} class="w-full h-full object-cover rounded-lg shadow-md">
+                                <Image
+                                    src={service.image}
+                                    alt={service.alt}
+                                    width={112}
+                                    height={112}
+                                    class="w-full h-full object-cover rounded-lg shadow-md"
+                                    loading="lazy"
+                                />
                             </div>
                         </div>
                     </button>
@@ -160,7 +194,14 @@ const services = {
                                 <p class="text-primary font-bold text-xl">{service.price}</p>
                             </div>
                             <div class="w-28 h-28 flex-shrink-0">
-                                <img src={service.image} alt={service.alt} class="w-full h-full object-cover rounded-lg shadow-md">
+                                <Image
+                                    src={service.image}
+                                    alt={service.alt}
+                                    width={112}
+                                    height={112}
+                                    class="w-full h-full object-cover rounded-lg shadow-md"
+                                    loading="lazy"
+                                />
                             </div>
                         </div>
                     </button>
@@ -168,61 +209,227 @@ const services = {
             </div>
         </div>
 
-        <!-- Additional Services -->
-        <div class="mb-12">
-            <h2 class="text-center text-3xl font-bold mb-6 text-darktext">Additional Services</h2>
-            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-primary mb-3">Lash Fill Appointments</h3>
-                    <p class="text-mediumtext mb-4">Maintain your beautiful lashes with our professional fill services every 2-3 weeks.</p>
-                    <div class="space-y-2">
-                        <div class="flex justify-between">
-                            <span>2 Week Fill</span>
-                            <span class="font-bold text-primary">$65</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>3 Week Fill</span>
-                            <span class="font-bold text-primary">$75</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>4+ Week Fill</span>
-                            <span class="font-bold text-primary">$85</span>
-                        </div>
+    <!-- Fills & Maintenance -->
+    <div class="mb-12">
+        <h2 class="text-center text-3xl font-bold mb-6 text-darktext">Orange County Lash Extension Fills & Maintenance</h2>
+        <div class="space-y-4 max-w-3xl mx-auto">
+            <!-- Natural Fill -->
+            <button type="button" class="service-button open-modal-button w-full text-left">
+                <div class="flex gap-4 items-center p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5">
+                    <div class="flex-1 min-w-0 space-y-1">
+                        <h4 class="font-semibold text-lg truncate">Natural Fill 🌿</h4>
+                        <p class="text-mediumtext text-sm">Maintain your Natural lash extensions Orange County with competitive prices based on time since last visit:</p>
+                        <ul class="space-y-1 text-sm">
+                            <li class="flex justify-between"><span>1-7 days</span><span class="font-bold text-primary">$60</span></li>
+                            <li class="flex justify-between"><span>8-14 days</span><span class="font-bold text-primary">$70</span></li>
+                            <li class="flex justify-between"><span>15-28 days</span><span class="font-bold text-primary">$80</span></li>
+                        </ul>
+                    </div>
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="/images/menu/natural_fill_fill.png" alt="Natural lash extension fill Orange County - Professional maintenance refill service OC salon" class="w-full h-full object-cover rounded-lg shadow-md">
                     </div>
                 </div>
+            </button>
 
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-primary mb-3">Special Services</h3>
-                    <p class="text-mediumtext mb-4">Additional services to complete your lash experience.</p>
-                    <div class="space-y-2">
-                        <div class="flex justify-between">
-                            <span>Lash Removal</span>
-                            <span class="font-bold text-primary">$25</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Mascara Removal</span>
-                            <span class="font-bold text-primary">$15</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>Consultation</span>
-                            <span class="font-bold text-primary">Free</span>
-                        </div>
+            <!-- Elegant Volume Fill -->
+            <button type="button" class="service-button open-modal-button w-full text-left">
+                <div class="flex gap-4 items-center p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5">
+                    <div class="flex-1 min-w-0 space-y-1">
+                        <h4 class="font-semibold text-lg truncate">Elegant Volume Fill ✨</h4>
+                        <p class="text-mediumtext text-sm">Maintain your Elegant Volume lash extensions Orange County with competitive prices based on time since last visit:</p>
+                        <ul class="space-y-1 text-sm">
+                            <li class="flex justify-between"><span>1-7 days</span><span class="font-bold text-primary">$60</span></li>
+                            <li class="flex justify-between"><span>8-14 days</span><span class="font-bold text-primary">$70</span></li>
+                            <li class="flex justify-between"><span>15-28 days</span><span class="font-bold text-primary">$80</span></li>
+                        </ul>
+                    </div>
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="/images/menu/elegant_volume_fill_fill.png" alt="Elegant Russian volume lash extension fill Orange County - Russian volume maintenance refill service OC salon" class="w-full h-full object-cover rounded-lg shadow-md">
                     </div>
                 </div>
-            </div>
+            </button>
+
+            <!-- Mega Volume Fill -->
+            <button type="button" class="service-button open-modal-button w-full text-left">
+                <div class="flex gap-4 items-center p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5">
+                    <div class="flex-1 min-w-0 space-y-1">
+                        <h4 class="font-semibold text-lg truncate">Mega Volume Fill 💎</h4>
+                        <p class="text-mediumtext text-sm">Keep your Mega Volume lash extensions Orange County looking bold with competitive prices based on time since last visit:</p>
+                        <ul class="space-y-1 text-sm">
+                            <li class="flex justify-between"><span>1-7 days</span><span class="font-bold text-primary">$70</span></li>
+                            <li class="flex justify-between"><span>8-14 days</span><span class="font-bold text-primary">$80</span></li>
+                            <li class="flex justify-between"><span>15-28 days</span><span class="font-bold text-primary">$90</span></li>
+                        </ul>
+                    </div>
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="/images/menu/mega_volume_fill_fill.png" alt="Mega Russian volume lash extension fill Orange County - Dramatic Russian volume maintenance refill OC salon" class="w-full h-full object-cover rounded-lg shadow-md">
+                    </div>
+                </div>
+            </button>
         </div>
 
-        <!-- Call to Action -->
-        <div class="text-center">
-            <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
-                <h3 class="text-2xl font-bold text-darktext mb-4">Ready for Your Perfect Lashes?</h3>
-                <p class="text-mediumtext mb-6">Book your appointment at one of our 4 convenient Orange County locations</p>
-                <button type="button" class="open-modal-button main-book-now-btn">
-                    <span>Book Now</span>
-                </button>
+        <div class="max-w-2xl mx-auto px-6 py-4 bg-white/60 backdrop-blur-sm rounded-2xl shadow-md relative overflow-hidden mt-8">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary/50 via-primary/30 to-secondary/50"></div>
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-secondary/50 via-primary/30 to-secondary/50"></div>
+            <div class="flex items-center justify-center mb-2">
+                <span class="text-primary text-lg mr-2">✨</span>
+                <h4 class="text-primary font-medium">Important Note</h4>
+                <span class="text-primary text-lg ml-2">✨</span>
             </div>
+            <p class="text-center text-sm text-mediumtext italic">All fill services require a minimum of 40% of lashes remaining, or they will be considered a full set. Prices and duration may vary based on the condition of your natural lashes and remaining extensions.</p>
         </div>
     </div>
+
+    <!-- Additional Services -->
+    <div class="mb-12">
+        <h2 class="text-center text-3xl font-bold mb-6 text-darktext">Additional Orange County Lash & Brow Services</h2>
+        <div class="space-y-4 max-w-3xl mx-auto">
+            <!-- Lash Lift -->
+            <button type="button" class="service-button open-modal-button w-full text-left">
+                <div class="flex gap-4 items-center p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5">
+                    <div class="flex-1 min-w-0 space-y-1">
+                        <h4 class="font-semibold text-lg truncate">Lash Lift 🌷</h4>
+                        <p class="text-mediumtext text-sm line-clamp-3 md:hidden">Beautiful lash lift Orange County that enhances your natural lashes for 6-8 weeks.</p>
+                        <p class="text-mediumtext text-sm line-clamp-3 hidden md:block">Enhance your natural lashes with a beautiful Orange County lash lift that lasts 6-8 weeks, perfect for active Orange County lifestyles and beach activities.</p>
+                        <p class="text-primary font-bold text-xl">$65</p>
+                    </div>
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="/images/menu/lash_lift_additional.png" alt="Professional lash lift Orange County - Natural lash enhancement curling service OC salon" class="w-full h-full object-cover rounded-lg shadow-md">
+                    </div>
+                </div>
+            </button>
+
+            <!-- Lash Lift and Tint -->
+            <button type="button" class="service-button open-modal-button w-full text-left">
+                <div class="flex gap-4 items-center p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5">
+                    <div class="flex-1 min-w-0 space-y-1">
+                        <h4 class="font-semibold text-lg truncate">Lash Lift and Tint 🌷✨</h4>
+                        <p class="text-mediumtext text-sm line-clamp-3 md:hidden">Lash lift and tint Orange County combo for darker, more defined natural lashes.</p>
+                        <p class="text-mediumtext text-sm line-clamp-3 hidden md:block">Combine our Orange County lash lift with a tint for darker, more defined natural lashes perfect for busy Orange County professionals who want low-maintenance beauty.</p>
+                        <p class="text-primary font-bold text-xl">$75</p>
+                    </div>
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="/images/menu/lash_lift_and_tint_additional.png" alt="Professional lash lift and tint Orange County - Natural lash enhancement darkening service OC salon" class="w-full h-full object-cover rounded-lg shadow-md">
+                    </div>
+                </div>
+            </button>
+
+            <!-- Brow Lamination -->
+            <button type="button" class="service-button open-modal-button w-full text-left">
+                <div class="flex gap-4 items-center p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5">
+                    <div class="flex-1 min-w-0 space-y-1">
+                        <h4 class="font-semibold text-lg truncate">Brow Lamination + Tint 🌸🎀</h4>
+                        <p class="text-mediumtext text-sm line-clamp-3 md:hidden">Get perfectly styled, fuller Orange County brow lamination lasting 6-8 weeks.</p>
+                        <p class="text-mediumtext text-sm line-clamp-3 hidden md:block">Get perfectly styled, fuller-looking brows with Orange County brow lamination that lasts 6-8 weeks, ideal for Orange County beach days and professional settings.</p>
+                        <p class="text-primary font-bold text-xl">$75</p>
+                    </div>
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="/images/menu/brow_lamination_plus_tint_additional.png" alt="Professional brow lamination and tint Orange County - Eyebrow shaping styling service OC salon" class="w-full h-full object-cover rounded-lg shadow-md">
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Permanent Makeup Services -->
+    <div class="mt-16">
+        <h2 class="text-center text-3xl font-bold mb-6 text-darktext">Orange County Permanent Makeup Services</h2>
+        <p class="text-center text-mediumtext mb-8 max-w-2xl mx-auto">Professional permanent makeup services in Orange County offering long-lasting beauty solutions with expert precision and artistry.</p>
+
+        <!-- 2x2 Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <!-- Eyeliner Bottom -->
+            <button type="button" class="service-button open-modal-button text-left">
+                <div class="p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5 h-full">
+                    <div class="space-y-2">
+                        <h4 class="font-semibold text-lg">Eyeliner Bottom 💫</h4>
+                        <p class="text-mediumtext text-sm">Professional permanent bottom eyeliner Orange County for enhanced eye definition and lasting beauty.</p>
+                        <p class="text-primary font-bold text-lg">$150</p>
+                    </div>
+                </div>
+            </button>
+
+            <!-- Eyeliner Top Line -->
+            <button type="button" class="service-button open-modal-button text-left">
+                <div class="p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5 h-full">
+                    <div class="space-y-2">
+                        <h4 class="font-semibold text-lg">Eyeliner Top Line ✨</h4>
+                        <p class="text-mediumtext text-sm">Expert permanent top eyeliner Orange County creating precise, elegant eye enhancement with professional results.</p>
+                        <p class="text-primary font-bold text-lg">$180</p>
+                    </div>
+                </div>
+            </button>
+
+            <!-- Hair Stroke Brows (Men) -->
+            <button type="button" class="service-button open-modal-button text-left">
+                <div class="p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5 h-full">
+                    <div class="space-y-2">
+                        <h4 class="font-semibold text-lg">Hair Stroke Brows (Men) 🔥</h4>
+                        <p class="text-mediumtext text-sm">Natural-looking permanent hair stroke eyebrows Orange County designed specifically for men's facial structure and preferences.</p>
+                        <p class="text-primary font-bold text-lg">$600</p>
+                    </div>
+                </div>
+            </button>
+
+            <!-- Hair Stroke Brows (Women) -->
+            <button type="button" class="service-button open-modal-button text-left">
+                <div class="p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5 h-full">
+                    <div class="space-y-2">
+                        <h4 class="font-semibold text-lg">Hair Stroke Brows (Women) 🌸</h4>
+                        <p class="text-mediumtext text-sm">Premium permanent hair stroke eyebrows Orange County for women, creating natural fullness and perfect shape.</p>
+                        <p class="text-primary font-bold text-lg">$500 - $550</p>
+                    </div>
+                </div>
+            </button>
+
+            <!-- Lip Blush -->
+            <button type="button" class="service-button open-modal-button text-left">
+                <div class="p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5 h-full">
+                    <div class="space-y-2">
+                        <h4 class="font-semibold text-lg">Lip Blush (2-3 Sessions) 💋</h4>
+                        <p class="text-mediumtext text-sm">Beautiful permanent lip blush Orange County with 2-3 sessions until perfection for enhanced natural lip color.</p>
+                        <p class="text-primary font-bold text-lg">$500 - $600</p>
+                    </div>
+                </div>
+            </button>
+
+            <!-- Ombre Brow -->
+            <button type="button" class="service-button open-modal-button text-left">
+                <div class="p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5 h-full">
+                    <div class="space-y-2">
+                        <h4 class="font-semibold text-lg">Ombre Brow 🎨</h4>
+                        <p class="text-mediumtext text-sm">Stunning ombre permanent eyebrows Orange County creating gradient color effect for modern, polished brow appearance.</p>
+                        <p class="text-primary font-bold text-lg">$350</p>
+                    </div>
+                </div>
+            </button>
+
+            <!-- Ombre with Hair Stroke -->
+            <button type="button" class="service-button open-modal-button text-left">
+                <div class="p-4 bg-white/60 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md hover:bg-white/70 hover:-translate-y-0.5 h-full">
+                    <div class="space-y-2">
+                        <h4 class="font-semibold text-lg">Ombre with Hair Stroke 💎</h4>
+                        <p class="text-mediumtext text-sm">Premium combination permanent eyebrows Orange County blending ombre shading with realistic hair strokes for ultimate definition.</p>
+                        <p class="text-primary font-bold text-lg">$450</p>
+                    </div>
+                </div>
+            </button>
+
+            <!-- Empty space for visual balance -->
+            <div class="hidden md:block"></div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold text-darktext mb-6">Ready for Your Perfect Lashes?</h3>
+            <button type="button" class="open-modal-button main-book-now-btn">
+                <span>Book Now</span>
+            </button>
+        </div>
+    </div>
+</div>
 </section>
 
 <style>

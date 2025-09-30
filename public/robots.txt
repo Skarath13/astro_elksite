@@ -1,20 +1,31 @@
+# robots.txt for Elegant Lashes by Katie
+# Orange County's Premier Lash Extension Salon
+
 User-agent: *
 Allow: /
-Allow: /images/
-Allow: /components/
-Allow: /css/
-Allow: /js/
 
-# Prevent access to any sensitive directories
-Disallow: /cgi-bin/
-Disallow: /tmp/
+# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
-Disallow: /.git/
-Disallow: /node_modules/
-
-# Crawl-delay for better server performance
-Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://elegantlashesbykatie.com/sitemap.xml 
+Sitemap: https://elegantlashesbykatie.com/sitemap-index.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: / 

@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Valentine's Day Lash Packages | Elegant Lashes Orange County"
+  description="Look stunning for Valentine's Day with our romantic lash specials and couples packages!"
+  keywords="Orange County lashes, lash extensions OC, Irvine Tustin Santa Ana Costa Mesa lashes"
+>
+  <Navigation />
+  <main class="pt-20 bg-lightbg">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <a href="/blog" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back to Blog
+      </a>
+      <header class="mb-12">
+        <div class="text-sm text-primary font-medium mb-4">July 27, 2025</div>
+        <h1 class="text-4xl md:text-5xl font-bold font-playfair text-darktext mb-6">Valentine's Day Lash Packages</h1>
+        <p class="text-xl text-mediumtext">Look stunning for Valentine's Day with our romantic lash specials and couples packages!</p>
+      </header>
+      <div class="prose prose-lg max-w-none">
+        <p>Discover amazing opportunities at Elegant Lashes by Katie! We're proud to serve Orange County with premium lash extension services at our four convenient locations in Irvine, Tustin, Santa Ana, and Costa Mesa.</p>
+        <h2>Our Services</h2>
+        <ul>
+          <li>Professional lash extension application</li>
+          <li>Custom lash designs for every client</li>
+          <li>Premium quality products</li>
+          <li>Expert certified lash artists</li>
+          <li>Comprehensive aftercare support</li>
+        </ul>
+        <h2>Why Choose Us</h2>
+        <p>With over 30,000 satisfied clients since 2016, Elegant Lashes by Katie is Orange County's trusted lash extension specialist. Visit our Irvine, Tustin, Santa Ana, or Costa Mesa location today!</p>
+      </div>
+      <div class="mt-16 bg-gradient-sunset p-8 rounded-xl text-center">
+        <h3 class="text-2xl font-bold font-playfair text-darktext mb-4">Ready to Book?</h3>
+        <p class="text-darktext mb-6">Visit us in Irvine, Tustin, Santa Ana, or Costa Mesa!</p>
+        <button type="button" class="open-modal-button main-book-now-btn text-xl"><span>Book Now</span></button>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
+<style>
+  .prose { color: #8A7584; }
+  .prose h2 { color: #221439; font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.25rem; }
+  .prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc; }
+  .prose li { margin-bottom: 0.75rem; }
+  .prose p { margin-bottom: 1.5rem; line-height: 1.75; }
+</style>

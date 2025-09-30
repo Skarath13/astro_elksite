@@ -1,31 +1,55 @@
 # robots.txt for Elegant Lashes by Katie
 # Orange County's Premier Lash Extension Salon
+# 4 Locations: Irvine, Tustin, Santa Ana, Costa Mesa
 
 User-agent: *
 Allow: /
+Allow: /blog/
+Allow: /images/
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
+Disallow: /_astro/
 
 # Sitemap location
 Sitemap: https://elegantlashesbykatie.com/sitemap-index.xml
+Sitemap: https://elegantlashesbykatie.com/sitemap.xml
 
-# Crawl-delay (optional, helps prevent server overload)
+# Crawl-delay (helps prevent server overload)
 Crawl-delay: 1
 
 # Allow all major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /
+Allow: /images/
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
 
 User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Social media bots
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Pinterestbot
 Allow: / 

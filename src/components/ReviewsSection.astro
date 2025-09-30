@@ -1,5 +1,6 @@
 ---
-// Reviews Section Component
+import { Image } from 'astro:assets';
+
 const reviews = {
   irvine: [
     {
@@ -281,7 +282,14 @@ const reviews = {
             </h2>
             <div class="flex items-center justify-center gap-4 mb-4">
                 <div class="flex items-center">
-                    <img src="/images/yelp.png" alt="5-star Yelp reviews Orange County lash extensions - Top rated lash salon OC" class="h-6 w-auto object-contain animate-pulse mr-3">
+                    <Image
+                        src="/images/yelp.png"
+                        alt="5-star Yelp reviews Orange County lash extensions - Top rated lash salon OC"
+                        width={80}
+                        height={24}
+                        class="h-6 w-auto object-contain animate-pulse mr-3"
+                        loading="lazy"
+                    />
                     <div class="flex">
                         {[...Array(5)].map(() => (
                             <svg class="h-6 w-6 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">

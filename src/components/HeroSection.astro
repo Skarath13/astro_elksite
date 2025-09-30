@@ -1,5 +1,5 @@
 ---
-// Hero Section Component
+import { Image } from 'astro:assets';
 ---
 
 <section id="top" class="bg-gradient-sunset pt-8 pb-4 md:pt-12 md:pb-6 scroll-mt-0">
@@ -47,7 +47,15 @@
                 <!-- Hero Image (Mobile Only) -->
                 <div class="block md:hidden mb-6">
                     <div class="hero-image-placeholder relative">
-                        <img src="/images/home/lash.PNG" alt="Best lash extensions Orange County salon - Premium Russian volume classic lashes Irvine Tustin Costa Mesa Santa Ana" class="w-full h-full object-cover relative z-10" style="border-radius: 0.875rem;">
+                        <Image
+                            src="/images/home/lash.PNG"
+                            alt="Best lash extensions Orange County salon - Premium Russian volume classic lashes Irvine Tustin Costa Mesa Santa Ana"
+                            width={600}
+                            height={600}
+                            class="w-full h-full object-cover relative z-10"
+                            style="border-radius: 0.875rem;"
+                            loading="eager"
+                        />
                     </div>
                 </div>
 
@@ -132,7 +140,15 @@
                     <div class="decorative-sparkle" style="bottom: 20%; left: 40%; z-index: 15;"></div>
 
                     <!-- Main Image -->
-                    <img src="/images/home/lash.PNG" alt="Top rated lash extension salon Orange County - Expert Russian volume classic lashes Irvine Tustin Costa Mesa Santa Ana" class="w-full h-full object-cover relative z-10" style="border-radius: 0.875rem;">
+                    <Image
+                        src="/images/home/lash.PNG"
+                        alt="Top rated lash extension salon Orange County - Expert Russian volume classic lashes Irvine Tustin Costa Mesa Santa Ana"
+                        width={600}
+                        height={600}
+                        class="w-full h-full object-cover relative z-10"
+                        style="border-radius: 0.875rem;"
+                        loading="eager"
+                    />
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 ---
-// Gallery/Instagram Section Component
+import { Image } from 'astro:assets';
+
 const galleryPosts = [
   {
     image: "/images/instagram/IMG_7372.jpg",
@@ -73,7 +74,14 @@ const galleryPosts = [
             {galleryPosts.map((post) => (
                 <div class="instagram-post group relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
                     <a href="https://instagram.com/elegantlashesbykatie" target="_blank" rel="noopener noreferrer" class="block w-full aspect-square">
-                        <img src={post.image} alt={post.alt} class="w-full h-full object-cover">
+                        <Image
+                            src={post.image}
+                            alt={post.alt}
+                            width={400}
+                            height={400}
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        />
 
                         <!-- Overlay -->
                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4">

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import HeroSection from '../components/HeroSection.astro';
@@ -334,10 +335,14 @@ import Footer from '../components/Footer.astro';
                 </div>
                 <!-- Image Column -->
                 <div class="md:w-1/2 mb-8 md:mb-0 flex justify-center">
-                    <picture>
-                        <source srcset="/images/image0.webp" type="image/webp">
-                        <img src="/images/image0.png" alt="Professional lash extension preparation Orange County - Expert preparation tips for Russian volume classic lashes OC appointment" class="rounded-xl shadow-xl w-full h-auto object-cover max-w-md" loading="lazy">
-                    </picture>
+                    <Image
+                        src="/images/image0.png"
+                        alt="Professional lash extension preparation Orange County - Expert preparation tips for Russian volume classic lashes OC appointment"
+                        width={600}
+                        height={800}
+                        class="rounded-xl shadow-xl w-full h-auto object-cover max-w-md"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         </div>

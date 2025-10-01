@@ -1,0 +1,201 @@
+---
+import Layout from './Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  publishDate: Date;
+  author: string;
+  image?: string;
+  category?: string;
+  tags?: string[];
+  featured?: boolean;
+}
+
+const { title, description, publishDate, author, image, category, tags } = Astro.props.frontmatter || Astro.props;
+
+// Format the publish date
+const formattedDate = new Date(publishDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<Layout
+  title={`${title} | Elegant Lashes by Katie Blog`}
+  description={description}
+  keywords={tags?.join(', ')}
+  ogImage={image}
+>
+  <Navigation />
+
+  <main class="pt-20 bg-gradient-ghibli">
+    <!-- Blog Header -->
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Breadcrumb -->
+      <nav class="mb-8 text-sm text-mediumtext">
+        <a href="/" class="hover:text-primary transition-colors">Home</a>
+        <span class="mx-2">→</span>
+        <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+        <span class="mx-2">→</span>
+        <span class="text-darktext">{title}</span>
+      </nav>
+
+      <!-- Post Meta -->
+      <div class="mb-6">
+        {category && (
+          <span class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
+            {category}
+          </span>
+        )}
+        <h1 class="text-4xl md:text-5xl font-bold font-playfair text-darktext mb-4">
+          {title}
+        </h1>
+        <div class="flex items-center gap-4 text-mediumtext text-sm">
+          <time datetime={publishDate.toString()}>
+            {formattedDate}
+          </time>
+          <span>•</span>
+          <span>By {author}</span>
+        </div>
+      </div>
+
+      <!-- Featured Image -->
+      {image && (
+        <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
+          <img
+            src={image}
+            alt={title}
+            class="w-full h-auto object-cover"
+            loading="eager"
+          />
+        </div>
+      )}
+
+      <!-- Blog Content -->
+      <div class="prose prose-lg max-w-none">
+        <div class="blog-content text-darktext leading-relaxed">
+          <slot />
+        </div>
+      </div>
+
+      <!-- Tags -->
+      {tags && tags.length > 0 && (
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <h3 class="text-sm font-semibold text-mediumtext mb-3">Tags:</h3>
+          <div class="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span class="bg-gray-100 text-darktext px-3 py-1 rounded-full text-sm">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- CTA Section -->
+      <div class="mt-12 bg-gradient-sunset rounded-xl p-8 text-center">
+        <h3 class="text-2xl font-bold font-playfair text-darktext mb-4">
+          Ready to Experience Beautiful Lashes?
+        </h3>
+        <p class="text-darktext/80 mb-6 max-w-2xl mx-auto">
+          Visit one of our Orange County locations for professional lash extensions that last.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:6573349919"
+            class="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-all shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            Call 657-334-9919
+          </a>
+          <a
+            href="/locations"
+            class="bg-white text-primary px-8 py-3 rounded-full font-medium hover:bg-white/90 transition-all shadow-md hover:shadow-lg"
+          >
+            View Locations
+          </a>
+        </div>
+      </div>
+
+      <!-- Back to Blog -->
+      <div class="mt-12 text-center">
+        <a
+          href="/blog"
+          class="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          Back to Blog
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .blog-content :global(h2) {
+    @apply text-3xl font-bold font-playfair text-darktext mt-8 mb-4;
+  }
+
+  .blog-content :global(h3) {
+    @apply text-2xl font-bold font-playfair text-darktext mt-6 mb-3;
+  }
+
+  .blog-content :global(h4) {
+    @apply text-xl font-semibold text-darktext mt-4 mb-2;
+  }
+
+  .blog-content :global(p) {
+    @apply mb-4 text-mediumtext leading-relaxed;
+  }
+
+  .blog-content :global(ul),
+  .blog-content :global(ol) {
+    @apply mb-4 ml-6 space-y-2;
+  }
+
+  .blog-content :global(ul) {
+    @apply list-disc;
+  }
+
+  .blog-content :global(ol) {
+    @apply list-decimal;
+  }
+
+  .blog-content :global(li) {
+    @apply text-mediumtext;
+  }
+
+  .blog-content :global(strong) {
+    @apply font-semibold text-darktext;
+  }
+
+  .blog-content :global(a) {
+    @apply text-primary hover:text-primary/80 underline transition-colors;
+  }
+
+  .blog-content :global(blockquote) {
+    @apply border-l-4 border-primary pl-4 italic my-6 text-mediumtext;
+  }
+
+  .blog-content :global(code) {
+    @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono;
+  }
+
+  .blog-content :global(pre) {
+    @apply bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+  }
+
+  .blog-content :global(img) {
+    @apply rounded-lg shadow-md my-6;
+  }
+</style>

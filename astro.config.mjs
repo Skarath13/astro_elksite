@@ -61,6 +61,11 @@ export default defineConfig({
   site: 'https://elegantlashesbykatie.com',
   compressHTML: true,
   build: {
-    inlineStylesheets: 'auto'
+    inlineStylesheets: 'always'
+  },
+  vite: {
+    build: {
+      cssCodeSplit: false
+    }
   }
 });

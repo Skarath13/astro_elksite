@@ -1,0 +1,475 @@
+/* Nancy's Lashes - Custom Styles */
+
+/* Gradient Animations */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hero gradient with animation */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    #a855f7 0%,    /* Purple 500 */
+    #8b5cf6 15%,   /* Violet 500 */
+    #7c3aed 30%,   /* Violet 600 */
+    #9333ea 45%,   /* Purple 600 */
+    #7e22ce 60%,   /* Purple 700 */
+    #6b21a8 75%,   /* Purple 800 */
+    #581c87 90%,   /* Purple 900 */
+    #4c1d95 100%   /* Purple 950 */
+  );
+  background-size: 600% 600%;
+  animation: gradient-shift 12s ease-in-out infinite;
+  position: relative;
+}
+
+/* Floating particles effect */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+}
+
+.hero-gradient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Accent gradient cards */
+.accent-gradient {
+  background: linear-gradient(135deg,
+    #581c87 0%,    /* Purple 900 */
+    #4c1d95 50%,   /* Purple 950 */
+    #581c87 100%   /* Purple 900 */
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.accent-gradient::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, rgba(139, 92, 246, 0.2) 40%, transparent 70%);
+  animation: accentGlow 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes accentGlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-30%, -30%) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.location-gradient {
+  background: linear-gradient(135deg,
+    #7e22ce 0%,    /* Purple 700 */
+    #6b21a8 30%,   /* Purple 800 */
+    #581c87 60%,   /* Purple 900 */
+    #4c1d95 100%   /* Purple 950 */
+  );
+  box-shadow:
+    0 20px 50px -10px rgba(126, 34, 206, 0.4),
+    0 10px 30px -10px rgba(107, 33, 168, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Glass morphism effects */
+.glass-card {
+  background: rgba(109, 40, 217, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(168, 85, 247, 0.5);
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 25px 30px -5px rgba(126, 34, 206, 0.15), 0 15px 15px -5px rgba(126, 34, 206, 0.1);
+}
+
+/* Icon animations */
+.icon-float {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.service-card:hover .icon-float {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 15px 40px rgba(168, 85, 247, 0.6);
+}
+
+/* Custom scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #7e22ce;
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #6b21a8;
+}
+
+/* Shimmer effect for CTA */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-200%) skewX(-20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(300%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.shimmer-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Subtle glow for phone number */
+.pulse-glow {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  transition: text-shadow 0.3s ease;
+}
+
+.pulse-glow:hover {
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+}
+
+/* Dot pattern background - static */
+.dot-pattern {
+  background-image:
+    radial-gradient(circle, rgba(126, 34, 206, 0.06) 1px, transparent 1px),
+    radial-gradient(circle, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Gradient mesh effect */
+@keyframes meshRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  33% {
+    transform: rotate(120deg) scale(1.2);
+  }
+  66% {
+    transform: rotate(240deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.gradient-mesh {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.gradient-mesh::before,
+.gradient-mesh::after {
+  content: '';
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.2;
+  animation: meshRotate 25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.gradient-mesh::before {
+  background: radial-gradient(circle, #7c3aed, #6b21a8, #581c87);
+  top: -350px;
+  right: -200px;
+}
+
+.gradient-mesh::after {
+  background: radial-gradient(circle, #7e22ce, #6b21a8, #581c87);
+  bottom: -350px;
+  left: -200px;
+  animation-direction: reverse;
+  animation-duration: 30s;
+}
+
+/* Subtle shadow variations */
+.shadow-soft {
+  box-shadow:
+    0 10px 20px -5px rgba(236, 72, 153, 0.2),
+    0 5px 10px -5px rgba(190, 24, 93, 0.15),
+    0 0 0 1px rgba(236, 72, 153, 0.05);
+}
+
+.shadow-soft-lg {
+  box-shadow:
+    0 20px 40px -10px rgba(236, 72, 153, 0.3),
+    0 10px 20px -10px rgba(190, 24, 93, 0.2),
+    0 0 0 1px rgba(236, 72, 153, 0.1);
+}
+
+/* Typography enhancements */
+.text-gradient {
+  background: linear-gradient(135deg, #be185d 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Service card hover state with glow */
+.service-card {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  background-size: 100%;
+  background-position: center;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  padding: 3px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.8), rgba(244, 63, 94, 0.8), rgba(219, 39, 119, 0.8));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-12px) scale(1.05) rotate(-1deg);
+  box-shadow:
+    0 30px 50px -10px rgba(236, 72, 153, 0.5),
+    0 20px 30px -10px rgba(219, 39, 119, 0.4),
+    0 0 0 1px rgba(236, 72, 153, 0.1);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Staggered fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Glassmorphism enhancement with subtle gradient border */
+.glass-card {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 10px 40px 0 rgba(190, 24, 93, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(190, 24, 93, 0.2), transparent 70%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Accent card enhancement */
+.accent-gradient {
+  background: linear-gradient(135deg,
+    #1f2937 0%,
+    #111827 50%,
+    #0f172a 100%
+  );
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Button press effect */
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.shimmer-button:active {
+  animation: buttonPress 0.2s ease;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Icon bounce on hover */
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.service-card:hover .icon-float {
+  animation: iconBounce 0.6s ease-in-out;
+}
+
+/* Enhanced hover state for CTA buttons */
+.shimmer-button:hover {
+  transform: scale(1.05) translateY(-2px);
+}
+
+/* Subtle background parallax effect */
+@keyframes parallaxFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  66% {
+    transform: translateY(5px) translateX(-5px);
+  }
+}
+
+.gradient-mesh {
+  animation: parallaxFloat 60s ease-in-out infinite;
+}
+
+/* Text selection styling */
+::selection {
+  background-color: rgba(236, 72, 153, 0.3);
+  color: #881337;
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #ec4899;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-gradient {
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient,
+  .shimmer-button::before,
+  .icon-float,
+  .fade-in-up,
+  .gradient-mesh {
+    animation: none;
+  }
+
+  .service-card:hover,
+  .hover-lift:hover {
+    transform: none;
+  }
+}

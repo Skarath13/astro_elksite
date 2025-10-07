@@ -111,15 +111,15 @@ import '../styles/nancy-lashes.css';
         </div>
       </section>
 
-      <!-- Bento Grid - Flex grow to fill space -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-3 flex-1 min-h-0 fade-in-up delay-100">
-        <!-- Services - Takes 2/3 width -->
-        <div class="lg:col-span-8">
-          <div class="glass-card rounded-3xl p-4 lg:p-5 shadow-soft h-full hover-lift flex flex-col">
+      <!-- Bento Grid - Stacked rows -->
+      <div class="flex flex-col gap-2 lg:gap-3 flex-1 min-h-0 fade-in-up delay-100">
+        <!-- Services Row - Full width -->
+        <div class="w-full">
+          <div class="glass-card rounded-3xl p-4 lg:p-5 shadow-soft hover-lift">
             <h2 class="text-3xl lg:text-4xl font-black mb-4 lg:mb-5 text-white" style="font-family: 'Playfair Display', serif; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);">
               Signature Services
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 flex-1">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4">
               <!-- Classic Lashes -->
               <div class="service-card group cursor-pointer flex flex-col rounded-3xl bg-gradient-to-br from-purple-400 via-violet-400 to-purple-500 border-3 border-purple-600 relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-violet-500/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -189,8 +189,8 @@ import '../styles/nancy-lashes.css';
           </div>
         </div>
 
-        <!-- Right Column: Contact + Location side by side -->
-        <div class="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-3">
+        <!-- Contact + Location Row - Side by side -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 lg:gap-3">
           <!-- Contact Card -->
           <div class="accent-gradient rounded-3xl p-4 lg:p-5 shadow-soft text-white hover-lift">
             <div class="relative z-10">

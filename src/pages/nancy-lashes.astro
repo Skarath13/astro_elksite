@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+---
+
+<Layout
+  title="Nancy's Lashes | Expert Lash Artist at Elegant Lashes Tustin"
+  description="Book with Nancy, experienced lash artist at Elegant Lashes by Katie Tustin location. Specializing in volume, classic, and hybrid lash extensions."
+  keywords="Nancy lash artist, Tustin lash extensions, expert lash technician, volume lashes Tustin"
+>
+  <!-- Hero Section -->
+  <section class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl top-20 left-10 animate-pulse"></div>
+      <div class="absolute w-96 h-96 bg-pink-500/20 rounded-full blur-3xl bottom-20 right-10 animate-pulse delay-1000"></div>
+      <div class="absolute w-64 h-64 bg-blue-500/10 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse delay-500"></div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <!-- Logo -->
+      <div class="text-center mb-12">
+        <Image
+          src="/images/brand/flawless-lashes-logo.png"
+          alt="Elegant Lashes by Katie"
+          width={200}
+          height={48}
+          class="h-16 w-auto mx-auto mb-4 opacity-90"
+          loading="eager"
+        />
+        <div class="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+          <span class="text-purple-200 text-sm font-medium">Tustin Location</span>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="text-center mb-16">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+          Nancy's<br>
+          <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            Signature Lashes
+          </span>
+        </h1>
+        <p class="text-xl md:text-2xl text-purple-100 mb-4 max-w-2xl mx-auto">
+          Expert Lash Artistry in Tustin
+        </p>
+        <p class="text-lg text-purple-200/80 max-w-xl mx-auto">
+          Specializing in volume, classic, and hybrid lash extensions with personalized attention to every detail
+        </p>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all hover:scale-105">
+          <div class="w-12 h-12 bg-purple-500/30 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-200" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Quick Sets</h3>
+          <p class="text-purple-200/80">Efficient application without compromising quality or comfort</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all hover:scale-105">
+          <div class="w-12 h-12 bg-pink-500/30 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-pink-200" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Detail Focused</h3>
+          <p class="text-purple-200/80">Meticulous attention to each lash for flawless results</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all hover:scale-105">
+          <div class="w-12 h-12 bg-blue-500/30 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Custom Styles</h3>
+          <p class="text-purple-200/80">Personalized look tailored to your eye shape and preferences</p>
+        </div>
+      </div>
+
+      <!-- Specialty Services -->
+      <div class="bg-white/5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/10 mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-8">Specialty Services</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-purple-200 mb-3">Volume Lashes</h3>
+            <p class="text-purple-200/70 mb-4">Dramatic, full sets using multiple extensions per natural lash for maximum impact</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-purple-200 mb-3">Classic Lashes</h3>
+            <p class="text-purple-200/70 mb-4">Natural enhancement with one extension per lash for subtle elegance</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-purple-200 mb-3">Hybrid Lashes</h3>
+            <p class="text-purple-200/70 mb-4">Perfect blend of volume and classic techniques for textured dimension</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-purple-200 mb-3">Custom Designs</h3>
+            <p class="text-purple-200/70 mb-4">Wispy, cat-eye, doll-eye, or natural - styled to match your vision</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Section -->
+      <div class="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Book with Nancy?</h2>
+          <p class="text-xl text-purple-100">Visit us at our Tustin location</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Location Info -->
+          <div class="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+            <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <svg class="w-6 h-6 text-purple-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              Location
+            </h3>
+            <p class="text-purple-100 mb-2">13112 Newport Ave #K</p>
+            <p class="text-purple-100 mb-4">Tustin, CA 92780</p>
+            <a href="https://maps.google.com/?q=13112+Newport+Ave+%23K,+Tustin,+CA+92780" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 transition-colors">
+              <span>Get Directions</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+            <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <svg class="w-6 h-6 text-pink-300" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              Contact
+            </h3>
+            <p class="text-purple-100 mb-2">Phone: (657) 334-9919</p>
+            <p class="text-purple-100 mb-4">Hours: Mon-Sun 9AM-7PM</p>
+            <p class="text-purple-200/70 text-sm">Ask for Nancy when booking!</p>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:6573349919" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            Call Now
+          </a>
+          <a href="https://maps.google.com/?q=13112+Newport+Ave+%23K,+Tustin,+CA+92780" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all border border-white/20">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+            Get Directions
+          </a>
+        </div>
+
+        <!-- Note -->
+        <div class="mt-8 text-center">
+          <p class="text-purple-200/60 text-sm">
+            Part of Elegant Lashes by Katie family • Tustin location
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+</style>

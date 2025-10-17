@@ -8,11 +8,11 @@
         <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px);"></div>
 
         <!-- Content -->
-        <div class="relative flex items-center justify-between gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 py-3 md:py-3.5 max-w-7xl mx-auto">
+        <div class="relative flex items-center justify-between gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 py-2 sm:py-2.5 max-w-7xl mx-auto">
             <!-- Promotional Text -->
             <div class="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3 text-white">
                 <span class="text-base sm:text-lg md:text-xl hidden xs:inline" aria-hidden="true">🍂</span>
-                <p class="text-[10px] xs:text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
+                <p class="text-[10px] xs:text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap leading-none">
                     <span class="hidden xs:inline">🎃 FALL PROMO 🎃</span>
                     <span class="xs:hidden">🎃 FALL</span>
                     <span class="mx-1 sm:mx-1.5 md:mx-2">•</span>
@@ -32,10 +32,10 @@
                 href="https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/LZMX8CTA69S7E/services"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="cta-button hidden sm:inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-4 py-1.5 sm:py-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/40 rounded-full text-white text-xs sm:text-sm font-bold transition-all duration-300 hover:scale-105 whitespace-nowrap shadow-lg"
+                class="cta-button hidden sm:inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/40 rounded-full text-white text-[10px] sm:text-xs font-bold transition-all duration-300 hover:scale-105 whitespace-nowrap shadow-lg leading-none"
             >
                 <span>Book Now</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-3.5 sm:w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
             </a>
@@ -43,10 +43,10 @@
             <!-- Close Button -->
             <button
                 id="close-banner"
-                class="close-button flex-shrink-0 p-1 sm:p-1.5 hover:bg-white/20 rounded-full transition-colors duration-200"
+                class="close-button flex-shrink-0 p-0.5 sm:p-1 hover:bg-white/20 rounded-full transition-colors duration-200"
                 aria-label="Close announcement banner"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
@@ -91,12 +91,12 @@
 }
 
 .banner-content {
-    min-height: 44px;
+    min-height: 32px;
 }
 
 @media (min-width: 640px) {
     .banner-content {
-        min-height: 52px;
+        min-height: 36px;
     }
 }
 

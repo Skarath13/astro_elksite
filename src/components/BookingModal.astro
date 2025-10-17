@@ -1,7 +1,7 @@
 <!-- Booking Modal -->
 <div id="booking-modal" class="modal fixed inset-0 z-[60] hidden">
     <div class="modal-overlay absolute inset-0 bg-black/50"></div>
-    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-xl shadow-lg z-50 overflow-y-auto fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-h-[90vh]">
+    <div class="modal-container bg-white w-11/12 md:max-w-md rounded-xl shadow-lg z-50 overflow-y-auto max-h-[90vh]">
         <div class="modal-content p-6">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="text-3xl font-playfair font-semibold text-darktext">Select Booking Location</h3>
@@ -49,15 +49,6 @@
 
 .modal.active .modal-overlay {
     opacity: 1;
-}
-
-.modal-container {
-    transform: translate(-50%, calc(-50% + 20px));
-    transition: transform 0.2s ease;
-}
-
-.modal.active .modal-container {
-    transform: translate(-50%, -50%);
 }
 
 .btn-ghibli {

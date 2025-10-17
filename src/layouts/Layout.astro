@@ -1,5 +1,6 @@
 ---
 import BookingModal from '../components/BookingModal.astro';
+import AnnouncementBanner from '../components/AnnouncementBanner.astro';
 import '../styles/global.css';
 
 export interface Props {
@@ -484,6 +485,7 @@ const ogImageURL = ogImage || 'https://elegantlashesbykatie.com/images/ogimg.jpg
     </script>
 </head>
 <body class="antialiased">
+    <AnnouncementBanner />
     <slot />
     <BookingModal />
 </body>

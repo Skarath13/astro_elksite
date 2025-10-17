@@ -8,12 +8,11 @@
         <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px);"></div>
 
         <!-- Desktop Content (static) -->
-        <div class="desktop-content hidden sm:flex relative items-center justify-between gap-3 md:gap-4 px-4 py-3 max-w-7xl mx-auto">
+        <div class="desktop-content hidden sm:flex relative items-center justify-between gap-3 md:gap-4 px-4 max-w-7xl mx-auto h-[50px]">
             <!-- Promotional Text -->
-            <div class="flex-1 flex items-center justify-center gap-2 md:gap-3 text-white">
-                <span class="text-lg md:text-xl" aria-hidden="true">🍂</span>
-                <p class="text-sm md:text-base font-semibold whitespace-nowrap">
-                    🎃 <span class="font-bold">FALL PROMO</span> 🎃
+            <div class="flex-1 flex items-center justify-center text-white">
+                <p class="text-sm md:text-base font-semibold whitespace-nowrap leading-none">
+                    <span class="font-bold">FALL PROMO</span>
                     <span class="mx-2">•</span>
                     <span class="font-bold">$75 Natural Set</span>
                     <span class="mx-2">•</span>
@@ -22,7 +21,6 @@
                     <span class="mx-2">•</span>
                     <span class="text-yellow-100 font-semibold">Santa Ana Location</span>
                 </p>
-                <span class="text-lg md:text-xl" aria-hidden="true">🍂</span>
             </div>
 
             <!-- CTA Button -->
@@ -30,10 +28,10 @@
                 href="https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/LZMX8CTA69S7E/services"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="cta-button inline-flex items-center gap-1 px-3 md:px-4 py-1.5 md:py-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 rounded-md text-white text-xs md:text-sm font-bold transition-all duration-300 hover:scale-105 whitespace-nowrap shadow-md"
+                class="cta-button inline-flex items-center gap-1 px-3 md:px-4 py-1 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 rounded-md text-white text-sm font-bold transition-all duration-300 hover:scale-105 whitespace-nowrap shadow-md leading-none"
             >
                 <span>Book Now</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 md:h-4 md:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
             </a>
@@ -41,10 +39,10 @@
             <!-- Close Button -->
             <button
                 id="close-banner-desktop"
-                class="close-button flex-shrink-0 p-1 hover:bg-white/20 rounded-sm transition-colors duration-200"
+                class="close-button flex-shrink-0 hover:bg-white/20 rounded-sm transition-colors duration-200 leading-none"
                 aria-label="Close announcement banner"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
@@ -112,15 +110,9 @@
     }
 }
 
-/* Industry standard heights: 50px mobile, 50-60px desktop */
+/* Industry standard height: 50px */
 .banner-content {
-    min-height: 50px;
-}
-
-@media (min-width: 640px) {
-    .banner-content {
-        min-height: 54px;
-    }
+    height: 50px;
 }
 
 /* Ticker animation for mobile */

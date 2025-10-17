@@ -153,13 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const banner = document.getElementById('fall-promo-banner');
     const closeButtonDesktop = document.getElementById('close-banner-desktop');
     const closeButtonMobile = document.getElementById('close-banner-mobile');
-    const STORAGE_KEY = 'fallPromo2024Dismissed';
 
-    // Check if banner was previously dismissed
-    const wasDismissed = localStorage.getItem(STORAGE_KEY);
-
-    if (!wasDismissed && banner) {
-        // Show banner with animation
+    // Always show banner on page load
+    if (banner) {
         banner.classList.remove('hidden');
         setTimeout(() => {
             banner.classList.add('banner-visible');
@@ -172,9 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Animate out
             banner.classList.remove('banner-visible');
             banner.classList.add('banner-hiding');
-
-            // Save dismissal to localStorage
-            localStorage.setItem(STORAGE_KEY, 'true');
 
             // Remove from DOM after animation
             setTimeout(() => {

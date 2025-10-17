@@ -8,19 +8,21 @@
         <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px);"></div>
 
         <!-- Desktop Content (static) -->
-        <div class="desktop-content hidden sm:flex relative items-center justify-between gap-3 md:gap-4 px-4 max-w-7xl mx-auto h-[50px]">
+        <div class="desktop-content hidden sm:flex relative items-center justify-between gap-3 md:gap-4 px-4 max-w-7xl mx-auto" style="height: 36px;">
             <!-- Promotional Text -->
-            <div class="flex-1 flex items-center justify-center text-white">
-                <p class="text-sm md:text-base font-semibold whitespace-nowrap leading-none">
-                    <span class="font-bold">FALL PROMO</span>
-                    <span class="mx-2">•</span>
+            <div class="flex-1 flex items-center justify-center gap-1.5 text-white">
+                <span class="text-sm leading-none" aria-hidden="true">🍂</span>
+                <p class="text-[13px] md:text-sm font-semibold whitespace-nowrap leading-none">
+                    🎃 <span class="font-bold">FALL PROMO</span> 🎃
+                    <span class="mx-1.5">•</span>
                     <span class="font-bold">$75 Natural Set</span>
-                    <span class="mx-2">•</span>
+                    <span class="mx-1.5">•</span>
                     <span class="hidden lg:inline">New & Returning Customers</span>
                     <span class="lg:hidden">New & Returning</span>
-                    <span class="mx-2">•</span>
+                    <span class="mx-1.5">•</span>
                     <span class="text-yellow-100 font-semibold">Santa Ana Location</span>
                 </p>
+                <span class="text-sm leading-none" aria-hidden="true">🍂</span>
             </div>
 
             <!-- CTA Button -->
@@ -28,10 +30,10 @@
                 href="https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/LZMX8CTA69S7E/services"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="cta-button inline-flex items-center gap-1 px-3 md:px-4 py-1 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 rounded-md text-white text-sm font-bold transition-all duration-300 hover:scale-105 whitespace-nowrap shadow-md leading-none"
+                class="cta-button inline-flex items-center gap-0.5 px-2.5 py-0.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 rounded text-white text-[13px] font-bold transition-all duration-300 hover:scale-105 whitespace-nowrap shadow-sm leading-none"
             >
                 <span>Book Now</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-2.5 w-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
             </a>
@@ -39,10 +41,10 @@
             <!-- Close Button -->
             <button
                 id="close-banner-desktop"
-                class="close-button flex-shrink-0 hover:bg-white/20 rounded-sm transition-colors duration-200 leading-none"
+                class="close-button flex-shrink-0 hover:bg-white/20 rounded-sm transition-colors duration-200 leading-none p-0"
                 aria-label="Close announcement banner"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
@@ -110,9 +112,15 @@
     }
 }
 
-/* Industry standard height: 50px */
+/* Thin strip height */
 .banner-content {
-    height: 50px;
+    height: 50px; /* Mobile with ticker needs space */
+}
+
+@media (min-width: 640px) {
+    .banner-content {
+        height: 36px; /* Desktop thin strip */
+    }
 }
 
 /* Ticker animation for mobile */

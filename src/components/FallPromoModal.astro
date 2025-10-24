@@ -1,0 +1,157 @@
+<!-- Fall Promo Booking Modal - Tustin & Santa Ana Only -->
+<div id="fall-promo-modal" class="modal fixed inset-0 z-[60] hidden">
+    <div class="modal-overlay absolute inset-0 bg-black/50"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-md rounded-xl shadow-lg z-50 overflow-y-auto max-h-[90vh]">
+        <div class="modal-content p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl md:text-3xl font-playfair font-semibold text-darktext">Fall Promo Booking</h3>
+                <button class="modal-close">
+                    <svg class="w-6 h-6 text-darktext" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Promo Details -->
+            <div class="mb-6 p-4 bg-gradient-to-r from-[#D97742] via-[#E8985E] to-[#F5A962] rounded-lg text-white text-center">
+                <div class="flex items-center justify-center gap-2 mb-2">
+                    <span>🍂</span>
+                    <span class="font-bold text-lg">$75 Natural Set</span>
+                    <span>🎃</span>
+                </div>
+                <p class="text-sm opacity-90">New & Returning Customers</p>
+            </div>
+
+            <!-- Location Selection -->
+            <p class="text-sm text-mediumtext mb-4 text-center">Select your preferred location:</p>
+            <div class="space-y-3">
+                <button type="button" data-location="Tustin" class="fall-promo-location-button block w-full text-center btn-fall-promo hover:shadow-xl py-4 px-5 text-lg">
+                    <div class="flex flex-col items-center gap-1">
+                        <span class="font-semibold">Tustin Location</span>
+                        <span class="text-sm opacity-75">13112 Newport Ave #K</span>
+                    </div>
+                </button>
+                <button type="button" data-location="Santa Ana" class="fall-promo-location-button block w-full text-center btn-fall-promo hover:shadow-xl py-4 px-5 text-lg">
+                    <div class="flex flex-col items-center gap-1">
+                        <span class="font-semibold">Santa Ana Location</span>
+                        <span class="text-sm opacity-75">3740 S Bristol St</span>
+                    </div>
+                </button>
+            </div>
+            <p class="text-center text-xs text-mediumtext mt-6">You will be redirected to our secure online booking platform.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal.active .modal-overlay {
+    opacity: 1;
+}
+
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: transform 0.2s ease;
+}
+
+.modal.active .modal-container {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-fall-promo {
+    background: linear-gradient(135deg, #FFF0F5 0%, #F4ADB8 50%, #FFCBB6 100%);
+    color: #5D4A54;
+    border: 2px solid rgba(217, 119, 66, 0.3);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-fall-promo:hover {
+    transform: translateY(-2px);
+    border-color: rgba(217, 119, 66, 0.6);
+    background: linear-gradient(135deg, #F5A962 0%, #E8985E 50%, #D97742 100%);
+    color: white;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('fall-promo-modal');
+    const closeButton = modal?.querySelector('.modal-close');
+    const overlay = modal?.querySelector('.modal-overlay');
+    const locationButtons = modal?.querySelectorAll('.fall-promo-location-button');
+
+    // Square booking URLs for Tustin and Santa Ana
+    const bookingUrls = {
+        'Tustin': 'https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/G0X353MBKGTCW/services',
+        'Santa Ana': 'https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/LZMX8CTA69S7E/services'
+    };
+
+    function openModal() {
+        if (modal) {
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal() {
+        if (modal) {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 250);
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Expose openModal globally so the banner can call it
+    (window as any).openFallPromoModal = openModal;
+
+    // Close modal
+    closeButton?.addEventListener('click', closeModal);
+    overlay?.addEventListener('click', closeModal);
+
+    // Handle location selection
+    locationButtons?.forEach(button => {
+        button.addEventListener('click', function() {
+            const location = this.getAttribute('data-location');
+            const bookingUrl = bookingUrls[location];
+
+            if (bookingUrl) {
+                window.open(bookingUrl, '_blank');
+            }
+
+            closeModal();
+        });
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
+</script>

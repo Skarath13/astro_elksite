@@ -18,22 +18,20 @@
                 <span class="hidden lg:inline-flex lg:items-center">New & Returning Customers</span>
                 <span class="inline-flex items-center lg:hidden">New & Returning</span>
                 <span class="inline-flex items-center opacity-60">•</span>
-                <span class="inline-flex items-center text-yellow-100 font-semibold">Santa Ana Location</span>
+                <span class="inline-flex items-center text-yellow-100 font-semibold">Santa Ana & Tustin</span>
                 <span class="inline-flex items-center">🍂</span>
             </div>
 
             <!-- CTA Button -->
-            <a
-                href="https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/LZMX8CTA69S7E/services"
-                target="_blank"
-                rel="noopener noreferrer"
+            <button
+                id="fall-promo-cta-desktop"
                 class="cta-button inline-flex items-center gap-1.5 px-4 py-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 rounded text-white text-sm font-bold transition-all duration-300 hover:scale-105 whitespace-nowrap shadow-sm"
             >
                 <span>Book Now</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-            </a>
+            </button>
 
             <!-- Close Button -->
             <button
@@ -53,9 +51,9 @@
             <div class="ticker-wrapper flex-1 overflow-hidden">
                 <div class="ticker-content inline-flex gap-8 text-white font-semibold text-sm whitespace-nowrap">
                     <!-- Repeat content for seamless loop -->
-                    <span class="ticker-item">🍂 🎃 FALL PROMO 🎃 • $75 Natural Set • New & Returning • Santa Ana • Book Now! 🍂</span>
-                    <span class="ticker-item">🍂 🎃 FALL PROMO 🎃 • $75 Natural Set • New & Returning • Santa Ana • Book Now! 🍂</span>
-                    <span class="ticker-item">🍂 🎃 FALL PROMO 🎃 • $75 Natural Set • New & Returning • Santa Ana • Book Now! 🍂</span>
+                    <span class="ticker-item">🍂 🎃 FALL PROMO 🎃 • $75 Natural Set • New & Returning • Santa Ana & Tustin • Book Now! 🍂</span>
+                    <span class="ticker-item">🍂 🎃 FALL PROMO 🎃 • $75 Natural Set • New & Returning • Santa Ana & Tustin • Book Now! 🍂</span>
+                    <span class="ticker-item">🍂 🎃 FALL PROMO 🎃 • $75 Natural Set • New & Returning • Santa Ana & Tustin • Book Now! 🍂</span>
                 </div>
             </div>
 
@@ -153,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const banner = document.getElementById('fall-promo-banner');
     const closeButtonDesktop = document.getElementById('close-banner-desktop');
     const closeButtonMobile = document.getElementById('close-banner-mobile');
+    const ctaButton = document.getElementById('fall-promo-cta-desktop');
 
     // Always show banner on page load
     if (banner) {
@@ -179,11 +178,20 @@ document.addEventListener('DOMContentLoaded', function() {
     closeButtonDesktop?.addEventListener('click', closeBanner);
     closeButtonMobile?.addEventListener('click', closeBanner);
 
-    // Make ticker tappable on mobile to navigate to booking
+    // Desktop CTA button opens modal
+    ctaButton?.addEventListener('click', function() {
+        if ((window as any).openFallPromoModal) {
+            (window as any).openFallPromoModal();
+        }
+    });
+
+    // Make ticker tappable on mobile to open modal
     const tickerWrapper = document.querySelector('.ticker-wrapper');
     tickerWrapper?.addEventListener('click', function() {
         if (window.innerWidth < 640) { // Only on mobile
-            window.open('https://book.squareup.com/appointments/f80ffd17-8030-41a2-ba19-12bd5541cb16/location/LZMX8CTA69S7E/services', '_blank');
+            if ((window as any).openFallPromoModal) {
+                (window as any).openFallPromoModal();
+            }
         }
     });
 });

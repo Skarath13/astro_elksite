@@ -59,26 +59,29 @@ import { Image } from 'astro:assets';
                     </div>
                 </div>
 
-                <!-- Promo Box -->
-                <div class="bg-white/25 backdrop-blur-md p-5 rounded-xl shadow-lg border border-primary/20 mb-6 transform hover:scale-[1.02] hover:bg-white/30 transition-all relative">
-                    <!-- Decorative sparkles for promo box -->
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/40 to-transparent rounded-full blur-xl"></div>
-                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-xl"></div>
+                <!-- Promo Box - Fall Themed -->
+                <div class="fall-promo-card bg-gradient-to-br from-[#FFF5E6] via-[#FFE8D1] to-[#FFD9B8] backdrop-blur-md p-5 rounded-xl shadow-lg border-2 border-[#D97742]/30 mb-6 transform hover:scale-[1.02] hover:shadow-xl transition-all relative overflow-hidden">
+                    <!-- Fall-themed decorative elements -->
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#F5A962]/30 to-transparent rounded-full blur-xl"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#E8985E]/20 to-transparent rounded-full blur-xl"></div>
+
+                    <!-- Subtle autumn pattern overlay -->
+                    <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(217, 119, 66, 0.3) 15px, rgba(217, 119, 66, 0.3) 30px);"></div>
 
                     <div class="relative">
-                        <div class="inline-block bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-3">
-                            New Client Special 🎀
+                        <div class="inline-block bg-gradient-to-r from-[#D97742] to-[#E8985E] text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-3 shadow-md">
+                            🍂 🎃 FALL PROMO 🎃 🍂
                         </div>
-                        <h3 class="text-2xl font-bold text-primary mb-2">Get $75 Luxury Lashes!</h3>
-                        <p class="text-darktext">Choose from our Natural Set or trendy Wet Set</p>
-                        <div class="mt-3 text-sm text-mediumtext">Limited time offer • No hidden fees • No fixes</div>
+                        <h3 class="text-2xl font-bold text-[#D97742] mb-2 drop-shadow-sm">$75 Natural Set</h3>
+                        <p class="text-[#5D4A54] font-medium">New & Returning Customers</p>
+                        <div class="mt-3 text-sm text-[#8A7584] font-medium">Santa Ana & Tustin Locations</div>
                         <div class="mt-4">
-                            <a href="/services" class="btn-ghibli-outline !inline-flex items-center gap-2 text-sm py-2 whitespace-nowrap">
-                                View Our Menu
+                            <button type="button" class="open-fall-promo-button fall-promo-cta !inline-flex items-center gap-2 text-sm py-2.5 px-4 whitespace-nowrap">
+                                Book This Offer
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -154,3 +157,51 @@ import { Image } from 'astro:assets';
         </div>
     </div>
 </section>
+
+<style>
+.fall-promo-cta {
+    background: linear-gradient(135deg, #D97742 0%, #E8985E 50%, #F5A962 100%);
+    color: white;
+    border: 2px solid rgba(217, 119, 66, 0.4);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(217, 119, 66, 0.2);
+}
+
+.fall-promo-cta:hover {
+    background: linear-gradient(135deg, #C46835 0%, #D97742 50%, #E8985E 100%);
+    border-color: rgba(217, 119, 66, 0.8);
+    box-shadow: 0 6px 20px rgba(217, 119, 66, 0.35);
+    transform: translateY(-2px);
+}
+
+.fall-promo-card {
+    animation: subtle-float 6s ease-in-out infinite;
+}
+
+@keyframes subtle-float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.fall-promo-card:hover {
+    animation-play-state: paused;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const fallPromoButton = document.querySelector('.open-fall-promo-button');
+
+    fallPromoButton?.addEventListener('click', function() {
+        if ((window as any).openFallPromoModal) {
+            (window as any).openFallPromoModal();
+        }
+    });
+});
+</script>
